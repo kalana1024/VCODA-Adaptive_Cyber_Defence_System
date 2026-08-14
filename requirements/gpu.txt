@@ -1,0 +1,4 @@
+# Install the CUDA-matched PyTorch command from https://pytorch.org/get-started/locally/ first.
+-r training.txt
+torch>=2.2
+tensorboard>=2.16

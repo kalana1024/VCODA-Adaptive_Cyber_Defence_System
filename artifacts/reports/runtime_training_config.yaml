@@ -1,0 +1,118 @@
+dataset:
+  data_dir: .\data\raw\nf_uq_nids_v2
+  schema_report: artifacts/reports/dataset_schema.json
+  prepared_dir: data/processed
+  file_globs:
+  - '*.csv'
+  - '*.csv.gz'
+  - '*.parquet'
+  chunk_rows: 250000
+  binary_label_candidates:
+  - Label
+  - label
+  - binary_label
+  attack_label_candidates:
+  - Attack
+  - attack
+  - attack_cat
+  - category
+  origin_candidates:
+  - Dataset
+  - dataset
+  - origin
+  timestamp_candidates:
+  - timestamp
+  - Timestamp
+  - FLOW_START_MILLISECONDS
+  group_candidates:
+  - IPV4_SRC_ADDR
+  - src_ip
+  - source_ip
+  benign_values:
+  - Benign
+  - benign
+  - Normal
+  - normal
+  - '0'
+  - 0
+  split:
+    strategy: origin_then_group
+    train_origins:
+    - NF-ToN-IoT-v2
+    - NF-BoT-IoT-v2
+    validation_origins:
+    - NF-UNSW-NB15-v2
+    test_origins:
+    - NF-CSE-CIC-IDS2018-v2
+    fallback_train_fraction: 0.7
+    fallback_validation_fraction: 0.15
+    fallback_test_fraction: 0.15
+  sampling:
+    mode: stratified_reservoir
+    max_rows_per_split: 1500000
+    max_rows_per_class_per_origin: 150000
+  output_format: parquet
+preprocessing:
+  numeric_scaler: robust
+  categorical_encoder: ordinal
+  missing_numeric: median
+  missing_categorical: __missing__
+  correlation_threshold: 0.995
+  low_variance_threshold: 0.0
+  max_categorical_cardinality: 512
+  fit_sample_rows: 500000
+supervised:
+  task: both
+  primary_model: xgboost
+  comparison_models:
+  - lightgbm
+  - catboost
+  - random_forest
+  - extra_trees
+  calibrate: true
+  calibration_method: platt
+  optuna_trials: 25
+  max_training_rows: 1500000
+  class_weight: balanced
+  n_jobs: -1
+  early_stopping_rounds: 50
+  selection_metric: macro_f1
+deep_learning:
+  models:
+  - mlp
+  - cnn1d
+  - cnn_lstm
+  - transformer
+  - autoencoder
+  profile: medium
+  epochs: 30
+  batch_size: 1024
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  loss: class_weighted_cross_entropy
+  focal_gamma: 2.0
+  tensorboard: true
+  early_stopping_patience: 5
+  gradient_clip: 1.0
+  mixed_precision: true
+  sequence_length: 32
+  require_true_sequence_order: true
+  timestamp_column: null
+  sequence_group_column: null
+anomaly:
+  models:
+  - isolation_forest
+  - autoencoder
+  - half_space_trees
+  benign_only: true
+  target_benign_fpr: 0.01
+  max_training_rows: 500000
+ensemble:
+  method: stacking
+  weight_search_iterations: 3000
+  objective: macro_f1
+  uncertainty_threshold: 0.25
+experiment_tracking:
+  enabled: true
+  backend: local
+  mlflow_optional: true

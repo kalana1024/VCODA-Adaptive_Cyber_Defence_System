@@ -1,0 +1,572 @@
+<title>V-CODA — Project Overview</title>
+<style>
+  :root {
+    --bg: #EEF1F3;
+    --surface: #FFFFFF;
+    --surface-2: #E4E9EC;
+    --ink: #121826;
+    --muted: #5B6472;
+    --accent: #1F6F78;
+    --accent-strong: #0F4C56;
+    --accent-tint: #DCEEEF;
+    --signal: #B4562B;
+    --signal-tint: #F5E4D9;
+    --good: #2E7D4F;
+    --good-tint: #DFF0E4;
+    --line: rgba(18, 24, 38, 0.12);
+    --shadow: 0 1px 2px rgba(18,24,38,0.06), 0 8px 24px rgba(18,24,38,0.05);
+    --serif: Georgia, "Iowan Old Style", "Noto Serif", "Noto Serif Sinhala", serif;
+    --sans: "Segoe UI", "Noto Sans", "Iskoola Pota", "Noto Sans Sinhala", system-ui, -apple-system, sans-serif;
+    --mono: Consolas, "SF Mono", "Cascadia Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B1220;
+      --surface: #101928;
+      --surface-2: #16213374;
+      --ink: #E7ECF2;
+      --muted: #93A0B4;
+      --accent: #57C2CE;
+      --accent-strong: #8CDCE6;
+      --accent-tint: #12333A;
+      --signal: #E39A6B;
+      --signal-tint: #3A2618;
+      --good: #6FCB93;
+      --good-tint: #123420;
+      --line: rgba(231, 236, 242, 0.14);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0B1220;
+    --surface: #101928;
+    --surface-2: #16213374;
+    --ink: #E7ECF2;
+    --muted: #93A0B4;
+    --accent: #57C2CE;
+    --accent-strong: #8CDCE6;
+    --accent-tint: #12333A;
+    --signal: #E39A6B;
+    --signal-tint: #3A2618;
+    --good: #6FCB93;
+    --good-tint: #123420;
+    --line: rgba(231, 236, 242, 0.14);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 28px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 36px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+  }
+
+  h1.title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+    margin: 0;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  .subtitle {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .meta-row b { color: var(--ink); font-weight: 600; }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 44px;
+    box-shadow: var(--shadow);
+  }
+
+  nav.toc .toc-label {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  nav.toc ol {
+    columns: 2;
+    column-gap: 28px;
+    margin: 0;
+    padding-left: 1.1em;
+    font-size: 14.5px;
+  }
+
+  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover { border-bottom-color: var(--accent); }
+
+  section { margin-bottom: 46px; scroll-margin-top: 20px; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 .num {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: 16.5px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 14px; max-width: 68ch; }
+  .max-prose { max-width: 68ch; }
+
+  strong { color: var(--ink); }
+  .sinhala-emph { color: var(--accent-strong); font-weight: 600; }
+
+  ul, ol.plain { margin: 0 0 14px; padding-left: 1.3em; max-width: 66ch; }
+  li { margin-bottom: 6px; }
+
+  code, .code {
+    font-family: var(--mono);
+    font-size: 0.92em;
+    background: var(--surface-2);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  .callout {
+    display: flex;
+    gap: 14px;
+    background: var(--accent-tint);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .callout .icon { font-size: 20px; line-height: 1.4; flex-shrink: 0; }
+  .callout p { margin: 0; max-width: none; }
+
+  .callout.warn {
+    background: var(--signal-tint);
+    border-color: color-mix(in srgb, var(--signal) 35%, transparent);
+  }
+  .callout.warn .icon { color: var(--signal); }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 18px 0 22px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .stat-card .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .stat-card .stat-value {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent-strong);
+  }
+
+  .stat-card .stat-note {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 18px 0 22px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    min-width: 560px;
+    background: var(--surface);
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+
+  th {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface-2);
+  }
+
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+  tr:last-child td { border-bottom: none; }
+
+  .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .pill.good { background: var(--good-tint); color: var(--good); }
+  .pill.warn { background: var(--signal-tint); color: var(--signal); }
+
+  .arch-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 18px 0 22px;
+    font-size: 13.5px;
+  }
+
+  .arch-step {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: var(--shadow);
+    font-family: var(--mono);
+    font-size: 12.5px;
+  }
+
+  .arch-arrow { color: var(--muted); font-size: 16px; }
+
+  hr.section-break {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 40px 0;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    nav.toc { break-inside: avoid; }
+    section { break-inside: avoid-page; }
+  }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 36px 16px 64px; }
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <span class="eyebrow">Project Overview Document · Cybersecurity AI / Network Intrusion Detection</span>
+    <h1 class="title">V-CODA</h1>
+    <p class="subtitle">Verifiable Cybersecurity-Oriented Detection and Adaptive Response — oyaage network traffic eka real-time analyze karala attacks, anomalies, saha threats detect karana AI-based system ekak.</p>
+    <div class="meta-row">
+      <span><b>Version:</b> 1.0 (post domain-adaptation power-up)</span>
+      <span><b>Stack:</b> Python · PyTorch · scikit-learn · FastAPI · Streamlit</span>
+      <span><b>Dataset:</b> NF-UQ-NIDS-v2 (multi-source NetFlow)</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <span class="toc-label">Contents</span>
+    <ol>
+      <li><a href="#what">Project එක මොකක්ද</a></li>
+      <li><a href="#architecture">Architecture Overview</a></li>
+      <li><a href="#dataset">Dataset saha Split Design</a></li>
+      <li><a href="#models">Train කරපු Models</a></li>
+      <li><a href="#advanced">Advanced Techniques</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#bugs">Hoyagath Bugs — Real Story</a></li>
+      <li><a href="#live">Live Monitoring saha PCAP</a></li>
+      <li><a href="#api">API saha Dashboard</a></li>
+      <li><a href="#deploy">Deploy Karana Vidiha</a></li>
+      <li><a href="#limits">Limitations</a></li>
+      <li><a href="#next">Ihala Ideas / Next Steps</a></li>
+    </ol>
+  </nav>
+
+  <section id="what">
+    <h2><span class="num">01</span> Project එක මොකක්ද?</h2>
+    <p>V-CODA kiyanne, network eka pass karana traffic (flows) balala eeka <strong>benign</strong> da (haniyak nathi) nattam <strong>attack</strong> da (malicious) kiyala decide karana, full-stack cybersecurity AI project ekak. Simple signature-based antivirus ekak wage nemei — meeka flow-level statistics (bytes, packets, duration, ports, TCP flags wagē features) balala, <span class="sinhala-emph">machine learning saha deep learning</span> ekathu karala pattern eka analyze karanawa.</p>
+    <p>Core idea eka methanin: model ekak witharak use karanawa nemei — tree-based models (XGBoost, LightGBM, CatBoost...), deep learning architectures (MLP, CNN, LSTM, Transformer, Autoencoder), saha unsupervised anomaly detectors okkoma ekatu karala, <strong>ensemble</strong> ekak hadala eeka use karanawa. Eyin ekක් fail unath, wenath eka cover karanawa — mekata kiyanne <em>defense in depth</em>.</p>
+    <div class="callout">
+      <span class="icon">🎯</span>
+      <p><strong>Goal eka:</strong> Real network traffic ekk balala — flow ekak "attack" da "benign" da kiyala confidence ekakin, explanation ekakin (ai monawada hitiye kiyala), saha risk score ekakin predict karanawa.</p>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <h2><span class="num">02</span> Architecture Overview</h2>
+    <p>End-to-end pipeline eka mehema yanawa — dataset ingestion idan, live monitoring ekata wisiddi:</p>
+    <div class="arch-flow">
+      <span class="arch-step">Raw NetFlow data</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">Prepare / clean / split</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">Preprocessing</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">Model training</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">Ensemble fusion</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">Engine (predict)</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">API / Dashboard</span>
+    </div>
+    <p>Codebase eka <code>src/vcoda/</code> yatate module vidihata organize karala tියෙනවා — <code>data</code>, <code>models</code>, <code>ensemble</code>, <code>anomaly</code>, <code>explainability</code>, <code>mitre</code>, <code>threat_intel</code>, <code>response</code>, <code>drift</code>, <code>audit</code>, <code>capture</code>, <code>api</code> wage. Ehema hindā, module ekak change karama wenath ewata harm wenne nathuwa, "responsibility" eka clear widihata separate wela tියෙනවා.</p>
+    <h3>Ehema components tika mokakda kalේ?</h3>
+    <ul>
+      <li><strong>Explainability engine</strong> — SHAP values use karala, prediction ekak eliyata mokada thibbe kiyala explain karanawa (analyst kenekta review karanna puluwan widihata).</li>
+      <li><strong>MITRE ATT&amp;CK reasoner</strong> — detected attack category eka, known attack techniques ekata map karanawa.</li>
+      <li><strong>Audit chain</strong> — blockchain-style hash chain ekak — sæma prediction ekakma tamper-proof widihata log karanawa.</li>
+      <li><strong>Drift monitor</strong> — traffic pattern eka time ekkat wenas wenawada kiyala watch karanawa (concept drift).</li>
+      <li><strong>Self-healing manager</strong> — model ekak corrupt unot / load wenne nattam, automatically fallback / recover karanna try karanawa.</li>
+    </ul>
+  </section>
+
+  <section id="dataset">
+    <h2><span class="num">03</span> Dataset saha Split Design</h2>
+    <p>Use karala tියෙන්නේ <strong>NF-UQ-NIDS-v2</strong> dataset eka — meeka NetFlow format ekata convert karapu, wenwena NIDS datasets (ToN-IoT, BoT-IoT, UNSW-NB15, CSE-CIC-IDS2018) combine karapu ekak. Interesting deshan ekk methana thiyenawa —</p>
+    <div class="callout warn">
+      <span class="icon">⚠️</span>
+      <p><strong>Train / Validation / Test tunama wenwena network eken ganne.</strong> Train eka ToN-IoT + BoT-IoT walin, validation eka UNSW-NB15 walin, test eka CSE-CIC-IDS2018 walin. Meeka deliberate design decision ekak — <em>cross-dataset generalization</em> test karanna, i.e. ‟aluth network ekakata dala test karama model eka hodata work karanawada" kiyala check karanna.</p>
+    </div>
+    <p>Meeka realistic ekak, ithin challenging ekakuත් — model ekak train dataset ekata witharak "overfit" unoth, hariyata wenath network ekaka work karanne නෑ. Ithin methana score tika (accuracy wage) low unath, eeka bug ekak nemei — eeka <em>real generalization difficulty</em> ekak.</p>
+  </section>
+
+  <section id="models">
+    <h2><span class="num">04</span> Train Karapu Models — Full List</h2>
+    <h3>Supervised (tree-based) — binary saha multiclass</h3>
+    <p>XGBoost, LightGBM, CatBoost, Random Forest, Extra Trees — okkoma binary (attack/benign) saha multiclass (attack category — DDoS, DoS, Backdoor, Reconnaissance...) task dekatama train karala.</p>
+    <h3>Deep learning — 5 architectures + 1 new</h3>
+    <ul>
+      <li><strong>MLP</strong> — basic feed-forward network, BatchNorm + Dropout ekka.</li>
+      <li><strong>CNN1D</strong> — 32-event sequence window ekaka temporal patterns balanawa.</li>
+      <li><strong>CNN-LSTM</strong> — convolution + LSTM combine karapu sequence model ekak.</li>
+      <li><strong>Transformer</strong> — self-attention use karana sequence model ekak.</li>
+      <li><strong>Autoencoder</strong> — benign traffic witharak learn karala, reconstruction error ekan anomaly detect karanawa.</li>
+      <li><strong>Multitask (aluth ekak)</strong> — shared encoder ekak, binary saha multiclass heads dekama ekathu — mekama best deep model eka unā (below results balanna).</li>
+    </ul>
+    <h3>Anomaly detection (unsupervised)</h3>
+    <p>Isolation Forest, Local Outlier Factor, One-Class SVM — benign traffic witharak use karala train karala, "normal" nathi ewa flag karanawa. Online/streaming anomaly detector ekakuත් (River library, Half-Space Trees) live traffic ekata thiyenawa.</p>
+    <h3>Ensemble — okkoma ekatu karana eka</h3>
+    <p>Meke <strong>stacking ensemble</strong> ekak — deep binary models 6ම (autoencoder, cnn1d, cnn_lstm, mlp, multitask, transformer) ekathu karala, Logistic Regression meta-model ekak use karala final decision eka gannawa. Ithin single model ekaka weakness eka, wenath models walin cover wenawa.</p>
+  </section>
+
+  <section id="advanced">
+    <h2><span class="num">05</span> Advanced Techniques — Meki Power-Up Round Eke Add Kale</h2>
+    <p>Ape original problem eka thibbe — deep models tika real network ekaka test karama, hariyata perform karanne nathuwa "always benign" wage collapse wenawa. Eeka fix karanna, mē techniques tika add kala:</p>
+    <h3>1. CORAL Domain Adaptation</h3>
+    <p>Train data eke feature distribution eka, validation+test (unlabeled) data eke distribution ekata align karanawa — covariance matrix align karala. Labels use karanne nෑ, features witharak.</p>
+    <h3>2. AdaBN (Adaptive BatchNorm)</h3>
+    <p>Training iwara unාට passe, BatchNorm layers eke statistics tika, target-domain unlabeled data walin recompute karanawa — model eka deployment environment ekata "adjust" wenawa.</p>
+    <h3>3. MC-Dropout Uncertainty</h3>
+    <p>Prediction ekak dunama, Dropout layers active kara-genama 20 vaara forward pass karala, mean saha std ekak ganna — "confidence" ekak witharak nemei, "uncertainty" ekakuත් denawa.</p>
+    <h3>4. Split-Conformal Calibration</h3>
+    <p>Ensemble eke, validation data eken kotasak "calibration" ekata venuven wetuwa, statistically-guaranteed confidence threshold ekak ganawa — prediction ekak "confident" da nattam "review karanna oni" da kiyala flag karanawa.</p>
+    <h3>5. Optuna Hyperparameter Search</h3>
+    <p>Deep models walatath, tree models wage automatic hyperparameter tuning (learning rate, weight decay wage) add kala.</p>
+  </section>
+
+  <section id="results">
+    <h2><span class="num">06</span> Results — Before vs After</h2>
+    <p>Ithuru ekක් gena ape metrics — <span class="code">macro-F1</span> saha <span class="code">ROC-AUC</span>, binary detection ekata (test set ekaka, cross-dataset):</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Macro-F1 (Before Fix)</th><th>Macro-F1 (After)</th><th>ROC-AUC (After)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>mlp</td><td class="num">0.15</td><td class="num">0.68</td><td class="num">0.80</td></tr>
+          <tr><td>cnn1d</td><td class="num">0.12</td><td class="num">0.39</td><td class="num">0.75</td></tr>
+          <tr><td>cnn_lstm</td><td class="num">0.12</td><td class="num">0.42</td><td class="num">0.30<span class="pill warn">weak calibration</span></td></tr>
+          <tr><td>transformer</td><td class="num">0.24</td><td class="num">0.56</td><td class="num">0.72</td></tr>
+          <tr><td>autoencoder</td><td class="num">0.17</td><td class="num">0.17</td><td class="num">0.42</td></tr>
+          <tr><td><strong>multitask (new)</strong></td><td class="num">—</td><td class="num">0.79</td><td class="num">0.95</td></tr>
+          <tr><td><strong>ensemble (all 6)</strong></td><td class="num">0.51</td><td class="num"><strong>0.78</strong></td><td class="num"><strong>0.99</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Final Ensemble Macro-F1</div>
+        <div class="stat-value">0.78</div>
+        <div class="stat-note">Cross-dataset test</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Final Ensemble ROC-AUC</div>
+        <div class="stat-value">0.99</div>
+        <div class="stat-note">Excellent ranking</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Conformal Coverage</div>
+        <div class="stat-value">90%</div>
+        <div class="stat-note">Statistical guarantee</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Deep Models Trained</div>
+        <div class="stat-value">6</div>
+        <div class="stat-note">+ 5 tree + 3 anomaly</div>
+      </div>
+    </div>
+    <p><span class="pill good">Improvement</span> okkoma deep model ekakma, "before fix" state ekakin "after" state ekakata dramatic widihata improve una — mek eke ithin ape root-cause fix eka eka <em>power-up</em> techniques walata wada, biggest impact eka dunna.</p>
+  </section>
+
+  <section id="bugs">
+    <h2><span class="num">07</span> Hoyagath Bugs — Real Investigation Story</h2>
+    <h3>Bug 1: 1e30 Sentinel Value</h3>
+    <p>Deep models okkoma "always predict benign" wenna hේthuwa hoyaddi therune — raw dataset eke <code>src_to_dst_second_bytes</code> column eke, "not applicable" kiyanna <code>1e30</code> wage astronomically loku number ekak use karala tibuna. Eeka missing value ekak widihata treat karanna wela, real number ekak widihata scale una gaman, variance eka <code>1e55</code> wage vibath una — BatchNorm layers okkoma poison una.</p>
+    <p><strong>Fix eka:</strong> sentinel values NaN karala, existing median-imputation policy ekatama pass kala. Heavy-tailed features walata signed-log1p compression ekakuත් add kala.</p>
+    <h3>Bug 2: Scapy Dissector Registration</h3>
+    <p>PCAP file analysis eka, ithin "live monitoring" core feature ekama, <strong>kisidina hariyata work karala nathi</strong> bug ekak hoyagatta — scapy library eke <code>PcapReader</code>/<code>rdpcap</code> function, Ethernet/IP/TCP layers "register" karaganna kalin, packet dissect karanawa. Ithin real capture file ekak dunath, packets okkoma unparseable "Raw" bytes widihata silently degrade wela, flow ekakwath extract wenne nathuwa hitiya.</p>
+    <p><strong>Fix eka:</strong> layer modules (<code>scapy.layers.l2</code>, <code>scapy.layers.inet</code>) rdpcap call karanna kalin explicitly import karala. Synthetic PCAP file ekak hadala verify kala — 40/40 flows dan hariyata extract wenawa.</p>
+  </section>
+
+  <section id="live">
+    <h2><span class="num">08</span> Live Monitoring saha PCAP Analysis</h2>
+    <p>Dan V-CODA ekata network traffic dෙන් vidiha dekakin dennawa —</p>
+    <ul>
+      <li><code>vcoda analyse-pcap --input capture.pcap</code> — existing <code>.pcap</code> file ekak analyze karala report ekak generate karanawa.</li>
+      <li><code>vcoda monitor-live --interface &lt;name&gt;</code> — Npcap use karala, real-time widihata traffic capture karala, flow ekak complete unama ude predict karanawa.</li>
+    </ul>
+    <p>Sequence-based deep models (cnn1d, cnn_lstm, transformer) ekata, source IP ekaka <strong>32-event window</strong> ekak oni — ithin aluth source ekak dunama, poddak witharak "supervised model" ekaka fallback wela, 32 events waradi passe <strong>full ensemble</strong> ekata switch wenawa. Meeka dashboard ekaka "Ensemble usage" chart ekaka pennanawa.</p>
+  </section>
+
+  <section id="api">
+    <h2><span class="num">09</span> API saha Dashboard</h2>
+    <h3>FastAPI Backend (<code>vcoda serve-api</code>)</h3>
+    <ul>
+      <li><code>/predict</code>, <code>/predict/batch</code> — single/batch flow prediction.</li>
+      <li><code>/pcap/analyse</code> — PCAP file upload karala analyze karanna.</li>
+      <li><code>/alerts</code>, <code>/incidents</code>, <code>/drift/status</code>, <code>/audit/verify</code>, <code>/models</code> — monitoring/ops endpoints.</li>
+      <li><code>/metrics</code> — Prometheus-format metrics (requests, predictions, latency).</li>
+    </ul>
+    <p>Security features — <code>VCODA_API_KEY</code> set karama API key authentication enable wenawa, <code>VCODA_RATE_LIMIT_PER_MINUTE</code> set karama rate limiting enable wenawa. Set karanne nathnam (default), dev-friendly widihata open widihata run wenawa.</p>
+    <h3>Streamlit Dashboard (<code>vcoda dashboard</code>)</h3>
+    <p>Pages — Overview, Alerts, MITRE &amp; Threat Graph, Model Comparison (full registry leaderboard eka), Drift &amp; Self-Healing, Audit, PCAP &amp; Live Monitoring, Settings.</p>
+  </section>
+
+  <section id="deploy">
+    <h2><span class="num">10</span> Deploy Karana Vidiha</h2>
+    <h3>Windows native</h3>
+    <p><code>.\windows\run_api.ps1</code> saha <code>.\windows\run_dashboard.ps1</code> run karanawa — API eka <code>:8000</code> ekata, dashboard eka <code>:8501</code> ekata start wenawa.</p>
+    <h3>Docker</h3>
+    <p><code>cd docker &amp;&amp; docker compose up --build</code> — container dekak (api + dashboard), existing trained models tika volume-mount karanawa, retrain karanna oni nathuwa.</p>
+  </section>
+
+  <section id="limits">
+    <h2><span class="num">11</span> Limitations — Ath Dath Ne Ethiya Ekak</h2>
+    <ul>
+      <li>Multiclass (attack category) detection eka innamath weak — 12-class problem ekaka severe cross-dataset shift ekaka best score eka 0.125 vithara (multitask model eke).</li>
+      <li><code>cnn_lstm</code> eke ROC-AUC eka random ekatath adui — raw probability ranking eka reliable nathi unath, ensemble eka eeka absorb karanawa.</li>
+      <li>Model registry eke <code>deep_binary</code> slot eka, "best" model ekak nemei "last trained" model ekak hold karanawa — cosmetic issue ekak.</li>
+      <li>Live monitoring ekata Npcap saha (samahara environments walata) admin privileges oni wenna puluwan.</li>
+    </ul>
+  </section>
+
+  <section id="next">
+    <h2><span class="num">12</span> Ihala Ideas / Next Steps</h2>
+    <ul>
+      <li>Graph Neural Network ekak add karala, multi-host lateral-movement attacks detect karanna.</li>
+      <li>Deep models walata adversarial robustness testing (evasion attacks eka kohomada handle karanawada balanna).</li>
+      <li>Active-learning queue ekak — high-disagreement predictions tika, analyst review ekakata route karala, future retraining ekata use karanna.</li>
+      <li>Multiclass problem eka gina attention ekak denna — cross-dataset generalization ekata specific techniques.</li>
+      <li>Grafana dashboard ekak, <code>/metrics</code> endpoint eka use karala.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>V-CODA — Verifiable Cybersecurity-Oriented Detection and Adaptive Response</span>
+    <span>Project overview document · Sinhala–English mixed</span>
+  </footer>
+
+</div>

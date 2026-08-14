@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    "artifacts/reports/supervised_binary_training_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\supervised\\binary_extra_trees_20260803T042757Z.joblib"
+  ],
+  "experiment": "supervised_binary",
+  "finished_at": "2026-08-03T04:28:26.388157+00:00",
+  "metrics": {
+    "accuracy": 0.3533621280845074,
+    "balanced_accuracy": 0.48445885550966106,
+    "brier_score": 0.28612902938814805,
+    "false_negative_rate": 0.7200018766925054,
+    "false_positive_rate": 0.3110804122881725,
+    "macro_f1": 0.34599064407652647,
+    "macro_precision": 0.48878558322676147,
+    "macro_recall": 0.48445885550966106,
+    "mcc": -0.026403399133276814,
+    "pr_auc": 0.8019730596521106,
+    "roc_auc": 0.4813390186873572,
+    "threshold": 0.575,
+    "weighted_f1": 0.39051025735978473
+  },
+  "parameters": {
+    "best_model": "extra_trees",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "models": [
+      "xgboost",
+      "lightgbm",
+      "catboost",
+      "random_forest",
+      "extra_trees"
+    ]
+  },
+  "run_id": "aaf5fa4c-8426-4f1c-8e6a-5eba2634ea28",
+  "started_at": "2026-08-03T04:28:26.388157+00:00",
+  "status": "finished"
+}

@@ -1,0 +1,35 @@
+inference:
+  active_binary_model: auto
+  active_multiclass_model: auto
+  active_deep_model: auto
+  active_anomaly_model: auto
+  active_ensemble: auto
+  batch_size: 4096
+  reject_on_schema_mismatch: false
+  minimum_feature_coverage: 0.70
+  uncertainty_action: manual_investigation
+  persist_predictions: true
+  prediction_store: outputs/predictions.jsonl
+risk:
+  weights:
+    confidence: 0.28
+    anomaly: 0.18
+    attack_severity: 0.16
+    asset_criticality: 0.14
+    repetition: 0.08
+    ioc_reputation: 0.08
+    model_agreement: 0.06
+    temporal_correlation: 0.05
+    uncertainty_penalty: 0.03
+  bands:
+    informational: [0, 19]
+    low: [20, 39]
+    medium: [40, 59]
+    high: [60, 79]
+    critical: [80, 100]
+
+threat_intel:
+  local_ioc_files: []
+  use_external_services: false
+  cache_seconds: 3600
+  request_timeout_seconds: 10

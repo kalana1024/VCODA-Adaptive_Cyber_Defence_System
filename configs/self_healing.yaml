@@ -1,0 +1,18 @@
+self_healing:
+  enabled: true
+  interval_seconds: 60
+  max_restart_attempts: 3
+  verify_model_checksums: true
+  verify_audit_chain: true
+  rollback_corrupt_models: true
+  quarantine_corrupt_artifacts: true
+  rollback_failed_responses: true
+  restart_api_on_stale_heartbeat: false
+  restart_dashboard_on_stale_heartbeat: false
+  stale_heartbeat_seconds: 180
+  auto_retrain_main_models: false
+  safe_online_updates:
+    anomaly_model: true
+    drift_detector: true
+  drift_action: save_window_and_recommend_retraining
+  health_report: artifacts/reports/self_healing_status.json

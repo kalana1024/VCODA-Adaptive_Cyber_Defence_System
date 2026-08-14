@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    "artifacts/reports/anomaly_training_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\anomaly\\isolation_forest_20260808T092004Z.joblib"
+  ],
+  "experiment": "anomaly_offline",
+  "finished_at": "2026-08-08T09:20:05.103660+00:00",
+  "metrics": {
+    "accuracy": 0.186294,
+    "balanced_accuracy": 0.5044259101033088,
+    "brier_score": 0.7966493120881367,
+    "confidence_threshold": 0.9294506470466362,
+    "false_negative_rate": 0.9909245686977999,
+    "false_positive_rate": 0.0002236110955825628,
+    "macro_f1": 0.16166840155091297,
+    "macro_precision": 0.5874264850777777,
+    "macro_recall": 0.5044259101033088,
+    "mcc": 0.039341670711982364,
+    "pr_auc": 0.8376748594339543,
+    "raw_threshold": 0.7361385957437391,
+    "roc_auc": 0.5047884780422929,
+    "threshold": 0.9294506470466362,
+    "weighted_f1": 0.0693908716743283
+  },
+  "parameters": {
+    "benign_only": true,
+    "best_model": "isolation_forest",
+    "models": [
+      "isolation_forest",
+      "local_outlier_factor",
+      "one_class_svm"
+    ]
+  },
+  "run_id": "3255890d-5ed1-4e61-a57f-d1e756d6fe86",
+  "started_at": "2026-08-08T09:20:05.103660+00:00",
+  "status": "finished"
+}

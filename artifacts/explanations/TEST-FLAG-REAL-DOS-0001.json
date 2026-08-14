@@ -1,0 +1,85 @@
+{
+  "anomaly": [
+    {
+      "feature": "flow_duration_ms",
+      "robust_deviation": 4294669999999999.5
+    },
+    {
+      "feature": "src_to_dst_avg_throughput",
+      "robust_deviation": 271999999999999.97
+    },
+    {
+      "feature": "tcp_win_max_out",
+      "robust_deviation": 26847000000000.0
+    },
+    {
+      "feature": "in_bytes",
+      "robust_deviation": 3020000000000.0
+    },
+    {
+      "feature": "src_to_dst_second_bytes",
+      "robust_deviation": 3020000000000.0
+    }
+  ],
+  "feature_coverage": {
+    "coverage": 1.0,
+    "extra": [
+      "origin",
+      "source_file",
+      "row_id",
+      "sequence_group",
+      "event_time",
+      "event_id"
+    ],
+    "missing": []
+  },
+  "mc_dropout_uncertainty": {
+    "mean_attack_probability": 0.9982591867446899,
+    "std_attack_probability": 0.0023731181863695383
+  },
+  "model_disagreement": 0.44182705873639794,
+  "reason_codes": [],
+  "supervised": [
+    {
+      "contribution": 2.2775185108184814,
+      "feature": "numeric__dst_port",
+      "method": "shap"
+    },
+    {
+      "contribution": 1.1509124040603638,
+      "feature": "numeric__application_protocol",
+      "method": "shap"
+    },
+    {
+      "contribution": 1.09892737865448,
+      "feature": "numeric__src_port",
+      "method": "shap"
+    },
+    {
+      "contribution": 1.052344560623169,
+      "feature": "numeric__src_to_dst_second_bytes",
+      "method": "shap"
+    },
+    {
+      "contribution": 0.7252741456031799,
+      "feature": "numeric__duration_in",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.3340508043766022,
+      "feature": "numeric__tcp_win_max_in",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.32449033856391907,
+      "feature": "numeric__tcp_win_max_out",
+      "method": "shap"
+    },
+    {
+      "contribution": 0.24520711600780487,
+      "feature": "numeric__server_tcp_flags",
+      "method": "shap"
+    }
+  ],
+  "uncertainty": 1.0
+}

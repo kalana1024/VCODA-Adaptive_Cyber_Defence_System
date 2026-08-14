@@ -1,0 +1,28 @@
+{
+  "artifacts": [
+    "artifacts/reports/supervised_multiclass_training_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\supervised\\multiclass_extra_trees_20260807T043802Z.joblib"
+  ],
+  "experiment": "supervised_multiclass",
+  "finished_at": "2026-08-07T04:47:03.460075+00:00",
+  "metrics": {
+    "accuracy": 0.2917313046826487,
+    "balanced_accuracy": 0.21972250216270228,
+    "macro_f1": 0.044616034369029826,
+    "macro_precision": 0.03528675669911096,
+    "macro_recall": 0.0798990916955281,
+    "mcc": -0.09873019899432545,
+    "roc_auc": NaN,
+    "weighted_f1": 0.16293905189112726
+  },
+  "parameters": {
+    "best_model": "extra_trees",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "models": [
+      "extra_trees"
+    ]
+  },
+  "run_id": "5475b87c-84b4-456e-af2e-20abe9e3e97c",
+  "started_at": "2026-08-07T04:47:03.460075+00:00",
+  "status": "finished"
+}

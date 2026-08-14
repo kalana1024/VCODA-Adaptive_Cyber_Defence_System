@@ -1,0 +1,33 @@
+{
+  "artifacts": [
+    "artifacts/reports/deep_mlp_binary_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\deep_learning\\mlp_binary_20260807T031129Z.joblib"
+  ],
+  "experiment": "deep_mlp_binary",
+  "finished_at": "2026-08-07T03:11:29.524097+00:00",
+  "metrics": {
+    "accuracy": 0.8065161158367121,
+    "balanced_accuracy": 0.6857920500791117,
+    "brier_score": 0.14697928726673126,
+    "false_negative_rate": 0.12592460094626354,
+    "false_positive_rate": 0.502491298895513,
+    "macro_f1": 0.68051623006947,
+    "macro_precision": 0.6759014607022129,
+    "macro_recall": 0.6857920500791117,
+    "mcc": 0.36155825531039637,
+    "pr_auc": 0.950444664385232,
+    "roc_auc": 0.8038712407997184,
+    "threshold": 0.5,
+    "weighted_f1": 0.8091607867573404
+  },
+  "parameters": {
+    "architecture": "mlp",
+    "device": "cuda",
+    "epochs_run": 6,
+    "profile": "medium",
+    "task": "binary"
+  },
+  "run_id": "f094bd1b-9287-4035-8547-079eeea6819c",
+  "started_at": "2026-08-07T03:11:29.524097+00:00",
+  "status": "finished"
+}

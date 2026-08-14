@@ -1,0 +1,251 @@
+{
+  "architecture": "cnn_lstm",
+  "device": "cuda",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.06688424855395231,
+      "validation_loss": 3.972372338337873
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.026235827993430008,
+      "validation_loss": 4.624968650478362
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.021922930851785583,
+      "validation_loss": 3.2200389339901845
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.020109999474665866,
+      "validation_loss": 4.2883207538086765
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.01871480680602012,
+      "validation_loss": 2.154528119034112
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.017841342178676833,
+      "validation_loss": 1.1014705533593168
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.016962683177531822,
+      "validation_loss": 3.7945499156159688
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.016407279671079612,
+      "validation_loss": 3.1547182115517822
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.015602924207636025,
+      "validation_loss": 2.183783493101022
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.01344864989679011,
+      "validation_loss": 2.600065979271874
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.012750218545827122,
+      "validation_loss": 2.293846354028303
+    }
+  ],
+  "loss": "class_weighted_cross_entropy",
+  "metrics": {
+    "accuracy": 0.6641424530074711,
+    "balanced_accuracy": 0.4121161996544067,
+    "brier_score": 0.2785031199455261,
+    "classification_report": {
+      "accuracy": 0.6641424530074711,
+      "attack": {
+        "f1-score": 0.7959975690491836,
+        "precision": 0.836463011980037,
+        "recall": 0.7592666430277091,
+        "support": 679669.0
+      },
+      "benign": {
+        "f1-score": 0.05033532951330547,
+        "precision": 0.04108328595959655,
+        "recall": 0.06496575628110432,
+        "support": 107903.0
+      },
+      "macro avg": {
+        "f1-score": 0.4231664492812445,
+        "precision": 0.4387731489698168,
+        "recall": 0.4121161996544067,
+        "support": 787572.0
+      },
+      "weighted avg": {
+        "f1-score": 0.6938365061461859,
+        "precision": 0.727490297641813,
+        "recall": 0.6641424530074711,
+        "support": 787572.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7010,
+        100893
+      ],
+      [
+        163619,
+        516050
+      ]
+    ],
+    "false_negative_rate": 0.24073335697229092,
+    "false_positive_rate": 0.9350342437188957,
+    "macro_f1": 0.4231664492812445,
+    "macro_precision": 0.4387731489698168,
+    "macro_recall": 0.4121161996544067,
+    "mcc": -0.1467085321544184,
+    "pr_auc": 0.7630165923552619,
+    "roc_auc": 0.2979427353442128,
+    "threshold": 0.5,
+    "weighted_f1": 0.6938365061461859
+  },
+  "mixed_precision": true,
+  "registry_record": {
+    "artifact_path": "models\\registry\\cnn_lstm_binary\\20260808T114106Z\\cnn_lstm_binary_20260808T114106Z.joblib",
+    "artifact_sha256": "43036f029099816b088c0040fd9e3e285206dac7da96232030e4dcf62943641c",
+    "created_at": "2026-08-08T11:41:06.387721+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "architecture": "cnn_lstm",
+      "device": "cuda",
+      "domain_adaptation": {
+        "adabn": true,
+        "eps": 0.001,
+        "method": "coral"
+      },
+      "epochs_run": 11,
+      "hyperparameter_overrides": null,
+      "loss": "class_weighted_cross_entropy",
+      "mixed_precision": true,
+      "profile": "medium"
+    },
+    "metrics": {
+      "accuracy": 0.6641424530074711,
+      "balanced_accuracy": 0.4121161996544067,
+      "brier_score": 0.2785031199455261,
+      "classification_report": {
+        "accuracy": 0.6641424530074711,
+        "attack": {
+          "f1-score": 0.7959975690491836,
+          "precision": 0.836463011980037,
+          "recall": 0.7592666430277091,
+          "support": 679669.0
+        },
+        "benign": {
+          "f1-score": 0.05033532951330547,
+          "precision": 0.04108328595959655,
+          "recall": 0.06496575628110432,
+          "support": 107903.0
+        },
+        "macro avg": {
+          "f1-score": 0.4231664492812445,
+          "precision": 0.4387731489698168,
+          "recall": 0.4121161996544067,
+          "support": 787572.0
+        },
+        "weighted avg": {
+          "f1-score": 0.6938365061461859,
+          "precision": 0.727490297641813,
+          "recall": 0.6641424530074711,
+          "support": 787572.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          7010,
+          100893
+        ],
+        [
+          163619,
+          516050
+        ]
+      ],
+      "false_negative_rate": 0.24073335697229092,
+      "false_positive_rate": 0.9350342437188957,
+      "macro_f1": 0.4231664492812445,
+      "macro_precision": 0.4387731489698168,
+      "macro_recall": 0.4121161996544067,
+      "mcc": -0.1467085321544184,
+      "pr_auc": 0.7630165923552619,
+      "roc_auc": 0.2979427353442128,
+      "threshold": 0.5,
+      "weighted_f1": 0.6938365061461859
+    },
+    "model_name": "cnn_lstm_binary",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "deep_binary",
+    "threshold": 0.5,
+    "version": "20260808T114106Z"
+  },
+  "task": "binary"
+}

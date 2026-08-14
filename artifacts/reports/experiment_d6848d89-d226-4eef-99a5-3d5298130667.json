@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    "artifacts/reports/deep_autoencoder_binary_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\deep_learning\\autoencoder_binary_20260806T083124Z.joblib"
+  ],
+  "experiment": "deep_autoencoder_binary",
+  "finished_at": "2026-08-06T08:31:24.612308+00:00",
+  "metrics": {
+    "accuracy": 0.18930303066761311,
+    "anomaly_threshold": 5912530432.0,
+    "balanced_accuracy": 0.5060026752359214,
+    "brier_score": 0.8102904558181763,
+    "false_negative_rate": 0.987927588992612,
+    "false_positive_rate": 6.706053554543687e-05,
+    "macro_f1": 0.16532545284583516,
+    "macro_precision": 0.589990344190733,
+    "macro_recall": 0.5060026752359214,
+    "mcc": 0.04648366640211359,
+    "pr_auc": 0.7917551028953175,
+    "roc_auc": 0.40086534378092725,
+    "threshold": 0.4407486907777549,
+    "weighted_f1": 0.07461795681236036
+  },
+  "parameters": {
+    "architecture": "autoencoder",
+    "device": "cuda",
+    "epochs_run": 6,
+    "profile": "medium",
+    "task": "binary"
+  },
+  "run_id": "d6848d89-d226-4eef-99a5-3d5298130667",
+  "started_at": "2026-08-06T08:31:24.612308+00:00",
+  "status": "finished"
+}

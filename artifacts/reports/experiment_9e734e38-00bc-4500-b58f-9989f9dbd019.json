@@ -1,0 +1,32 @@
+{
+  "artifacts": [
+    "artifacts/reports/supervised_multiclass_training_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\supervised\\multiclass_random_forest_20260807T071313Z.joblib"
+  ],
+  "experiment": "supervised_multiclass",
+  "finished_at": "2026-08-07T07:18:39.808498+00:00",
+  "metrics": {
+    "accuracy": 0.35491000385045973,
+    "balanced_accuracy": 0.2670897903911194,
+    "macro_f1": 0.06655380114606449,
+    "macro_precision": 0.05384653023188792,
+    "macro_recall": 0.08902993013037314,
+    "mcc": 0.05158560839322487,
+    "roc_auc": NaN,
+    "weighted_f1": 0.26537368100816044
+  },
+  "parameters": {
+    "best_model": "random_forest",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "models": [
+      "xgboost",
+      "lightgbm",
+      "catboost",
+      "random_forest",
+      "extra_trees"
+    ]
+  },
+  "run_id": "9e734e38-00bc-4500-b58f-9989f9dbd019",
+  "started_at": "2026-08-07T07:18:39.808498+00:00",
+  "status": "finished"
+}

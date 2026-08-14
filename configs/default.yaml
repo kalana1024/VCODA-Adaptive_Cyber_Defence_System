@@ -1,0 +1,22 @@
+project:
+  name: V-CODA
+  version: 1.0.0
+  random_seed: 42
+  environment: local
+paths:
+  raw_data: data/raw/nf_uq_nids_v2
+  processed_data: data/processed
+  models: models
+  artifacts: artifacts
+  outputs: outputs
+runtime:
+  profile: auto
+  workers: 0
+  batch_size: 4096
+  max_memory_fraction: 0.75
+  device: auto
+  response_mode: recommendation_only
+  require_model_checksums: true
+logging:
+  level: INFO
+  redact_ip_last_octet: false

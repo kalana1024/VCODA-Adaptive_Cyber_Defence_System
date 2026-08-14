@@ -1,0 +1,266 @@
+{
+  "architecture": "cnn1d",
+  "device": "cuda",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.20767428480302466,
+      "validation_loss": 3.424333601118142
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.0895399841456876,
+      "validation_loss": 4.209432403641564
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.05907937922844634,
+      "validation_loss": 3.5380355867848965
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.048133360935510294,
+      "validation_loss": 3.7178737011605727
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.039506888887785335,
+      "validation_loss": 3.3668292640323307
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.03751014267819607,
+      "validation_loss": 2.4734895944276656
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.03579317314085231,
+      "validation_loss": 3.121372116370249
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.03485159898484071,
+      "validation_loss": 3.6258480542651688
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.03382218100906208,
+      "validation_loss": 2.1876469188254344
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.03294889197608916,
+      "validation_loss": 3.08319025710769
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.03218684711457456,
+      "validation_loss": 3.2849448437012088
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.031544858278029726,
+      "validation_loss": 2.3564383834674603
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.02895438149022329,
+      "validation_loss": 2.6404783576320594
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.028518879437778318,
+      "validation_loss": 2.9174121222109397
+    }
+  ],
+  "loss": "class_weighted_cross_entropy",
+  "metrics": {
+    "accuracy": 0.39976027588588725,
+    "balanced_accuracy": 0.6380990078628386,
+    "brier_score": 0.34052982926368713,
+    "classification_report": {
+      "accuracy": 0.39976027588588725,
+      "attack": {
+        "f1-score": 0.47113299875371706,
+        "precision": 0.9830710260564268,
+        "recall": 0.30980227139975486,
+        "support": 679669.0
+      },
+      "benign": {
+        "f1-score": 0.30611813540862426,
+        "precision": 0.18186273398409092,
+        "recall": 0.9663957443259223,
+        "support": 107903.0
+      },
+      "macro avg": {
+        "f1-score": 0.3886255670811707,
+        "precision": 0.5824668800202588,
+        "recall": 0.6380990078628386,
+        "support": 787572.0
+      },
+      "weighted avg": {
+        "f1-score": 0.44852478160084014,
+        "precision": 0.8732997564588773,
+        "recall": 0.39976027588588725,
+        "support": 787572.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        104277,
+        3626
+      ],
+      [
+        469106,
+        210563
+      ]
+    ],
+    "false_negative_rate": 0.6901977286002451,
+    "false_positive_rate": 0.03360425567407764,
+    "macro_f1": 0.3886255670811707,
+    "macro_precision": 0.5824668800202588,
+    "macro_recall": 0.6380990078628386,
+    "mcc": 0.2134347142555915,
+    "pr_auc": 0.9488372972572285,
+    "roc_auc": 0.753960604449131,
+    "threshold": 0.9299999999999999,
+    "weighted_f1": 0.44852478160084014
+  },
+  "mixed_precision": true,
+  "registry_record": {
+    "artifact_path": "models\\registry\\cnn1d_binary\\20260808T094946Z\\cnn1d_binary_20260808T094946Z.joblib",
+    "artifact_sha256": "e06ec5154f0f9e52b002e94bae637498684bd63967c81d27335832c7987c35fe",
+    "created_at": "2026-08-08T09:49:46.468880+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "architecture": "cnn1d",
+      "device": "cuda",
+      "domain_adaptation": {
+        "adabn": true,
+        "eps": 0.001,
+        "method": "coral"
+      },
+      "epochs_run": 14,
+      "hyperparameter_overrides": null,
+      "loss": "class_weighted_cross_entropy",
+      "mixed_precision": true,
+      "profile": "medium"
+    },
+    "metrics": {
+      "accuracy": 0.39976027588588725,
+      "balanced_accuracy": 0.6380990078628386,
+      "brier_score": 0.34052982926368713,
+      "classification_report": {
+        "accuracy": 0.39976027588588725,
+        "attack": {
+          "f1-score": 0.47113299875371706,
+          "precision": 0.9830710260564268,
+          "recall": 0.30980227139975486,
+          "support": 679669.0
+        },
+        "benign": {
+          "f1-score": 0.30611813540862426,
+          "precision": 0.18186273398409092,
+          "recall": 0.9663957443259223,
+          "support": 107903.0
+        },
+        "macro avg": {
+          "f1-score": 0.3886255670811707,
+          "precision": 0.5824668800202588,
+          "recall": 0.6380990078628386,
+          "support": 787572.0
+        },
+        "weighted avg": {
+          "f1-score": 0.44852478160084014,
+          "precision": 0.8732997564588773,
+          "recall": 0.39976027588588725,
+          "support": 787572.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          104277,
+          3626
+        ],
+        [
+          469106,
+          210563
+        ]
+      ],
+      "false_negative_rate": 0.6901977286002451,
+      "false_positive_rate": 0.03360425567407764,
+      "macro_f1": 0.3886255670811707,
+      "macro_precision": 0.5824668800202588,
+      "macro_recall": 0.6380990078628386,
+      "mcc": 0.2134347142555915,
+      "pr_auc": 0.9488372972572285,
+      "roc_auc": 0.753960604449131,
+      "threshold": 0.9299999999999999,
+      "weighted_f1": 0.44852478160084014
+    },
+    "model_name": "cnn1d_binary",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "deep_binary",
+    "threshold": 0.9299999999999999,
+    "version": "20260808T094946Z"
+  },
+  "task": "binary"
+}

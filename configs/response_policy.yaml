@@ -1,0 +1,24 @@
+mode: recommendation_only
+windows_firewall:
+  enabled: false
+  require_administrator: true
+  allow_public_ips_only: true
+  maximum_block_minutes: 15
+  rule_prefix: VCODA_TEMP_BLOCK
+  require_human_confirmation: true
+safety:
+  prohibited_actions: ["delete_files", "wipe_host", "arbitrary_command", "disable_security_tools"]
+  protected_assets: ["domain_controller", "database_primary", "backup_server", "management_host"]
+  protected_networks: ["127.0.0.0/8", "169.254.0.0/16"]
+  allowlisted_ips: ["127.0.0.1"]
+  minimum_confidence_for_disruptive_action: 0.92
+  minimum_risk_for_disruptive_action: 85
+  require_two_signal_corroboration: true
+  cooldown_seconds: 300
+  rollback_required: true
+actions:
+  informational: ["continue_monitoring"]
+  low: ["increase_logging", "notify_analyst"]
+  medium: ["capture_pcap", "create_incident_ticket", "manual_investigation"]
+  high: ["temporary_rate_limit", "temporary_block_source", "isolate_endpoint"]
+  critical: ["isolate_endpoint", "disable_vulnerable_service", "force_credential_reset"]

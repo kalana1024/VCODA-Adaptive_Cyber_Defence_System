@@ -1,0 +1,16 @@
+{
+  "configured": [
+    "attack",
+    "dataset",
+    "label"
+  ],
+  "constants": [],
+  "high_cardinality": [],
+  "identifiers": [],
+  "labels": [
+    "attack",
+    "dataset",
+    "label"
+  ],
+  "post_event_suspects": []
+}

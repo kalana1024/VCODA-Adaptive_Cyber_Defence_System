@@ -1,0 +1,1683 @@
+{
+  "best_model": "xgboost",
+  "best_registry_record": {
+    "artifact_path": "models\\registry\\multiclass_xgboost\\20260808T090345Z\\multiclass_xgboost_20260808T090345Z.joblib",
+    "artifact_sha256": "9907d735c72af0e1840dcc735d5a7c9fc21f021515735e79ab3b103c8968efcc",
+    "created_at": "2026-08-08T09:03:45.721334+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "colsample_bytree": 0.9558085928940517,
+      "learning_rate": 0.10838679764387593,
+      "max_depth": 7,
+      "min_child_weight": 3.7606169203089936,
+      "n_estimators": 290,
+      "reg_alpha": 0.013045686650201302,
+      "reg_lambda": 0.9615114510138635,
+      "subsample": 0.7980968357474467
+    },
+    "metrics": {
+      "accuracy": 0.3484398961043586,
+      "balanced_accuracy": 0.26232918664511784,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.7933300403483164,
+          "precision": 0.6766756768271611,
+          "recall": 0.9585834132471381,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.1632188043413084,
+          "precision": 0.8115682766845558,
+          "recall": 0.09073333333333333,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.3484398961043586,
+        "injection": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.0797124037241354,
+          "precision": 0.12402032945930974,
+          "recall": 0.08744306221503928,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.31779291412561594,
+          "precision": 0.495530666252997,
+          "recall": 0.3484398961043586,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          142943,
+          0,
+          2383,
+          2450,
+          50,
+          144,
+          21,
+          510,
+          18,
+          586
+        ],
+        [
+          0,
+          201,
+          0,
+          769,
+          148779,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          68099,
+          96,
+          13610,
+          8763,
+          0,
+          55169,
+          1181,
+          0,
+          0,
+          3082
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          421,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {
+        "colsample_bytree": 0.9558085928940517,
+        "learning_rate": 0.10838679764387593,
+        "max_depth": 7,
+        "min_child_weight": 3.7606169203089936,
+        "n_estimators": 290,
+        "reg_alpha": 0.013045686650201302,
+        "reg_lambda": 0.9615114510138635,
+        "subsample": 0.7980968357474467
+      },
+      "inference": {
+        "latency_ms_per_row": 0.015599149995250628,
+        "throughput_rows_per_second": 64106.05708031935
+      },
+      "macro_f1": 0.08695898588087499,
+      "macro_precision": 0.13529490486470153,
+      "macro_recall": 0.09539243150731558,
+      "mcc": 0.27616067445594655,
+      "model": "xgboost",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.31779291412561594
+    },
+    "model_name": "multiclass_xgboost",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "supervised_multiclass",
+    "threshold": null,
+    "version": "20260808T090345Z"
+  },
+  "classes": [
+    "Backdoor",
+    "Benign",
+    "DDoS",
+    "DoS",
+    "Reconnaissance",
+    "Theft",
+    "injection",
+    "mitm",
+    "password",
+    "ransomware",
+    "scanning",
+    "xss"
+  ],
+  "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+  "global_explanations": {
+    "method": "shap_tree",
+    "outputs": [
+      "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\artifacts\\reports\\explanations\\multiclass_xgboost_global_importance.csv",
+      "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\artifacts\\reports\\explanations\\multiclass_xgboost_shap_summary.png"
+    ],
+    "sample_rows": 2000
+  },
+  "models": {
+    "catboost": {
+      "accuracy": 0.3027974813987184,
+      "balanced_accuracy": 0.24202870828832737,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.4666988044405025,
+          "precision": 0.31356561269560246,
+          "recall": 0.9121641105425868,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 1.3262775368373586e-05,
+          "precision": 0.0012531328320802004,
+          "recall": 6.666666666666667e-06,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.3027974813987184,
+        "injection": {
+          "f1-score": 0.03387438249823571,
+          "precision": 0.024291497975708502,
+          "recall": 0.055944055944055944,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.04171553747617555,
+          "precision": 0.02825918695861593,
+          "recall": 0.08067623609610912,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.15493132726405984,
+          "precision": 0.10451211910384257,
+          "recall": 0.3027974813987184,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1606,
+          136021,
+          0,
+          796,
+          8701,
+          69,
+          21,
+          314,
+          4,
+          422,
+          194,
+          971
+        ],
+        [
+          0,
+          148593,
+          0,
+          1,
+          212,
+          0,
+          943,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          148795,
+          0,
+          1,
+          882,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          322
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          379,
+          0,
+          0,
+          23,
+          0,
+          24,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {},
+      "inference": {
+        "latency_ms_per_row": 0.0013764599978458136,
+        "throughput_rows_per_second": 726501.3161043687
+      },
+      "macro_f1": 0.04171553747617555,
+      "macro_precision": 0.02825918695861593,
+      "macro_recall": 0.08067623609610912,
+      "mcc": -0.08602459468957904,
+      "model": "catboost",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.15493132726405984
+    },
+    "extra_trees": {
+      "accuracy": 0.2917735929685709,
+      "balanced_accuracy": 0.21975436576380833,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.46365136175545196,
+          "precision": 0.31707834355949255,
+          "recall": 0.8622241297219,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.027167817083692838,
+          "precision": 0.07107787810383748,
+          "recall": 0.016793333333333334,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.2917735929685709,
+        "injection": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.0409015982365954,
+          "precision": 0.0323463518052775,
+          "recall": 0.07325145525460278,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.16295323577981863,
+          "precision": 0.12896611201237398,
+          "recall": 0.2917735929685709,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          54,
+          128574,
+          0,
+          12361,
+          7618,
+          1,
+          1,
+          1,
+          401,
+          55,
+          53
+        ],
+        [
+          0,
+          129067,
+          0,
+          20509,
+          173,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          147478,
+          2,
+          2519,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          377,
+          0,
+          51,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {},
+      "inference": {
+        "latency_ms_per_row": 0.015674249996664003,
+        "throughput_rows_per_second": 63798.90586234321
+      },
+      "macro_f1": 0.04461992534901316,
+      "macro_precision": 0.03528692924212091,
+      "macro_recall": 0.07991067845956666,
+      "mcc": -0.09868126411803527,
+      "model": "extra_trees",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.16295323577981863
+    },
+    "lightgbm": {
+      "accuracy": 0.3106030087002584,
+      "balanced_accuracy": 0.23389020783177641,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.6192968773786187,
+          "precision": 0.4758261295175303,
+          "recall": 0.886634164660439,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.05427311081283948,
+          "precision": 0.060931364002424306,
+          "recall": 0.04892666666666667,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.3106030087002584,
+        "injection": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.05613083234928818,
+          "precision": 0.044729791126662886,
+          "recall": 0.07796340261059213,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.2236602908093047,
+          "precision": 0.1782660939376142,
+          "recall": 0.3106030087002584,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          432,
+          132214,
+          0,
+          2094,
+          11463,
+          15,
+          58,
+          40,
+          899,
+          1759,
+          145
+        ],
+        [
+          0,
+          15140,
+          0,
+          110698,
+          18209,
+          0,
+          3,
+          5699,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          130459,
+          5,
+          7339,
+          0,
+          0,
+          3415,
+          1263,
+          0,
+          0,
+          7519
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          49,
+          0,
+          316,
+          62,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {},
+      "inference": {
+        "latency_ms_per_row": 0.17469389999751,
+        "throughput_rows_per_second": 5724.2983299030675
+      },
+      "macro_f1": 0.061233635290132565,
+      "macro_precision": 0.04879613577454133,
+      "macro_recall": 0.08505098466610052,
+      "mcc": 0.02636574538372934,
+      "model": "lightgbm",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.2236602908093047
+    },
+    "random_forest": {
+      "accuracy": 0.3528935203217471,
+      "balanced_accuracy": 0.26557616679743473,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.6405590862267176,
+          "precision": 0.4976418422596722,
+          "recall": 0.8986380005230722,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.15397786607375258,
+          "precision": 0.1453720755342646,
+          "recall": 0.16366666666666665,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.3528935203217471,
+        "injection": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.06621141269170584,
+          "precision": 0.05358449314949473,
+          "recall": 0.08852538893247824,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.26400401135575086,
+          "precision": 0.21369754350921497,
+          "recall": 0.3528935203217471,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1007,
+          134004,
+          3,
+          5603,
+          6653,
+          8,
+          124,
+          1478,
+          1,
+          76,
+          123,
+          39
+        ],
+        [
+          0,
+          11378,
+          0,
+          138371,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          123820,
+          0,
+          24550,
+          1517,
+          0,
+          18,
+          0,
+          2,
+          0,
+          0,
+          93
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          76,
+          0,
+          353,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {},
+      "inference": {
+        "latency_ms_per_row": 0.01423928999574855,
+        "throughput_rows_per_second": 70228.22066961006
+      },
+      "macro_f1": 0.06621141269170584,
+      "macro_precision": 0.05358449314949473,
+      "macro_recall": 0.08852538893247824,
+      "mcc": 0.04936419342367954,
+      "model": "random_forest",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.26400401135575086
+    },
+    "xgboost": {
+      "accuracy": 0.3484398961043586,
+      "balanced_accuracy": 0.26232918664511784,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.7933300403483164,
+          "precision": 0.6766756768271611,
+          "recall": 0.9585834132471381,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.1632188043413084,
+          "precision": 0.8115682766845558,
+          "recall": 0.09073333333333333,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.3484398961043586,
+        "injection": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.0797124037241354,
+          "precision": 0.12402032945930974,
+          "recall": 0.08744306221503928,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.31779291412561594,
+          "precision": 0.495530666252997,
+          "recall": 0.3484398961043586,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          142943,
+          0,
+          2383,
+          2450,
+          50,
+          144,
+          21,
+          510,
+          18,
+          586
+        ],
+        [
+          0,
+          201,
+          0,
+          769,
+          148779,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          68099,
+          96,
+          13610,
+          8763,
+          0,
+          55169,
+          1181,
+          0,
+          0,
+          3082
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          421,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "hyperparameters": {
+        "colsample_bytree": 0.9558085928940517,
+        "learning_rate": 0.10838679764387593,
+        "max_depth": 7,
+        "min_child_weight": 3.7606169203089936,
+        "n_estimators": 290,
+        "reg_alpha": 0.013045686650201302,
+        "reg_lambda": 0.9615114510138635,
+        "subsample": 0.7980968357474467
+      },
+      "inference": {
+        "latency_ms_per_row": 0.015599149995250628,
+        "throughput_rows_per_second": 64106.05708031935
+      },
+      "macro_f1": 0.08695898588087499,
+      "macro_precision": 0.13529490486470153,
+      "macro_recall": 0.09539243150731558,
+      "mcc": 0.27616067445594655,
+      "model": "xgboost",
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "task": "multiclass",
+      "threshold": null,
+      "weighted_f1": 0.31779291412561594
+    }
+  },
+  "skipped_models": {},
+  "task": "multiclass"
+}

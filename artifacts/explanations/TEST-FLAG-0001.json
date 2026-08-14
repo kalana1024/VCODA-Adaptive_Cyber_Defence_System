@@ -1,0 +1,121 @@
+{
+  "anomaly": [
+    {
+      "feature": "packet_asymmetry",
+      "robust_deviation": 5998000000000.0
+    },
+    {
+      "feature": "flow_duration_ms",
+      "robust_deviation": 499999999999.99994
+    },
+    {
+      "feature": "in_bytes",
+      "robust_deviation": 3999999999.9999995
+    },
+    {
+      "feature": "out_bytes",
+      "robust_deviation": 5999.0
+    },
+    {
+      "feature": "out_packets",
+      "robust_deviation": 5999.0
+    }
+  ],
+  "feature_coverage": {
+    "coverage": 0.32,
+    "extra": [
+      "event_id",
+      "source_ip",
+      "destination_ip",
+      "source_port",
+      "destination_port"
+    ],
+    "missing": [
+      "src_port",
+      "dst_port",
+      "application_protocol",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code"
+    ]
+  },
+  "mc_dropout_uncertainty": {
+    "mean_attack_probability": 0.2994147837162018,
+    "std_attack_probability": 0.35268911719322205
+  },
+  "model_disagreement": 0.12168874764743368,
+  "reason_codes": [
+    "high_packet_rate"
+  ],
+  "supervised": [
+    {
+      "contribution": -1.7765717506408691,
+      "feature": "numeric__in_bytes",
+      "method": "shap"
+    },
+    {
+      "contribution": 1.6789488792419434,
+      "feature": "numeric__dst_port",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.8790500164031982,
+      "feature": "numeric__total_packets",
+      "method": "shap"
+    },
+    {
+      "contribution": 0.5368866920471191,
+      "feature": "numeric__src_to_dst_second_bytes",
+      "method": "shap"
+    },
+    {
+      "contribution": 0.40182191133499146,
+      "feature": "numeric__src_port",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.37794268131256104,
+      "feature": "numeric__direction_byte_ratio",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.25924161076545715,
+      "feature": "numeric__byte_asymmetry",
+      "method": "shap"
+    },
+    {
+      "contribution": -0.22932830452919006,
+      "feature": "numeric__bytes_per_second",
+      "method": "shap"
+    }
+  ],
+  "uncertainty": 0.4867549905897347
+}

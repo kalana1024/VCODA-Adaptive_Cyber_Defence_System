@@ -1,0 +1,13 @@
+{
+  "project": "V-CODA Advanced Full Project",
+  "version": "1.0.0",
+  "packaged_date": "2026-08-02",
+  "source_only": true,
+  "trained_models_included": false,
+  "dataset_included": false,
+  "automated_tests_passed": 26,
+  "syntax_compilation": "passed",
+  "cli_import_smoke": "passed",
+  "packaging_runtime": "Linux/Python 3.13 CPU-only",
+  "performance_results_included": false
+}

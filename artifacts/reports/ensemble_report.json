@@ -1,0 +1,162 @@
+{
+  "members": [
+    "deep_autoencoder_binary",
+    "deep_cnn1d_binary",
+    "deep_cnn_lstm_binary",
+    "deep_mlp_binary",
+    "deep_multitask_binary",
+    "deep_transformer_binary"
+  ],
+  "method": "stacking",
+  "metrics": {
+    "accuracy": 0.7992469029804979,
+    "balanced_accuracy": 0.860527124128261,
+    "brier_score": 0.03830652119713384,
+    "classification_report": {
+      "accuracy": 0.7992469029804979,
+      "attack": {
+        "f1-score": 0.84251666971356,
+        "precision": 0.9954571911890427,
+        "recall": 0.7303125635952987,
+        "support": 299747.0
+      },
+      "benign": {
+        "f1-score": 0.7231916656801232,
+        "precision": 0.5694197355945926,
+        "recall": 0.9907416846612235,
+        "support": 107903.0
+      },
+      "macro avg": {
+        "f1-score": 0.7828541676968416,
+        "precision": 0.7824384633918177,
+        "recall": 0.860527124128261,
+        "support": 407650.0
+      },
+      "weighted avg": {
+        "f1-score": 0.81093191340246,
+        "precision": 0.8826871198753963,
+        "recall": 0.7992469029804979,
+        "support": 407650.0
+      }
+    },
+    "conformal_confident_fraction": 1.0,
+    "conformal_coverage_target": 0.9,
+    "conformal_threshold": 0.659023442369695,
+    "confusion_matrix": [
+      [
+        106904,
+        999
+      ],
+      [
+        80838,
+        218909
+      ]
+    ],
+    "false_negative_rate": 0.2696874364047013,
+    "false_positive_rate": 0.009258315338776494,
+    "macro_f1": 0.7828541676968416,
+    "macro_precision": 0.7824384633918177,
+    "macro_recall": 0.860527124128261,
+    "mcc": 0.6382060073357415,
+    "mean_disagreement": 0.3341674282808824,
+    "pr_auc": 0.9929681466333151,
+    "roc_auc": 0.9869370342221355,
+    "threshold": 0.7999999999999999,
+    "weighted_f1": 0.81093191340246
+  },
+  "registry_record": {
+    "artifact_path": "models\\registry\\ensemble_stacking\\20260808T125148Z\\stacking_20260808T125148Z.joblib",
+    "artifact_sha256": "f5d4045ecc0613d76e835108f8ed04fd42736b0457a25572036c6c48ca90fc25",
+    "created_at": "2026-08-08T12:51:48.181417+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "deep_autoencoder_binary",
+      "deep_cnn1d_binary",
+      "deep_cnn_lstm_binary",
+      "deep_mlp_binary",
+      "deep_multitask_binary",
+      "deep_transformer_binary"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "members": [
+        "deep_autoencoder_binary",
+        "deep_cnn1d_binary",
+        "deep_cnn_lstm_binary",
+        "deep_mlp_binary",
+        "deep_multitask_binary",
+        "deep_transformer_binary"
+      ],
+      "method": "stacking",
+      "weights": null
+    },
+    "metrics": {
+      "accuracy": 0.7992469029804979,
+      "balanced_accuracy": 0.860527124128261,
+      "brier_score": 0.03830652119713384,
+      "classification_report": {
+        "accuracy": 0.7992469029804979,
+        "attack": {
+          "f1-score": 0.84251666971356,
+          "precision": 0.9954571911890427,
+          "recall": 0.7303125635952987,
+          "support": 299747.0
+        },
+        "benign": {
+          "f1-score": 0.7231916656801232,
+          "precision": 0.5694197355945926,
+          "recall": 0.9907416846612235,
+          "support": 107903.0
+        },
+        "macro avg": {
+          "f1-score": 0.7828541676968416,
+          "precision": 0.7824384633918177,
+          "recall": 0.860527124128261,
+          "support": 407650.0
+        },
+        "weighted avg": {
+          "f1-score": 0.81093191340246,
+          "precision": 0.8826871198753963,
+          "recall": 0.7992469029804979,
+          "support": 407650.0
+        }
+      },
+      "conformal_confident_fraction": 1.0,
+      "conformal_coverage_target": 0.9,
+      "conformal_threshold": 0.659023442369695,
+      "confusion_matrix": [
+        [
+          106904,
+          999
+        ],
+        [
+          80838,
+          218909
+        ]
+      ],
+      "false_negative_rate": 0.2696874364047013,
+      "false_positive_rate": 0.009258315338776494,
+      "macro_f1": 0.7828541676968416,
+      "macro_precision": 0.7824384633918177,
+      "macro_recall": 0.860527124128261,
+      "mcc": 0.6382060073357415,
+      "mean_disagreement": 0.3341674282808824,
+      "pr_auc": 0.9929681466333151,
+      "roc_auc": 0.9869370342221355,
+      "threshold": 0.7999999999999999,
+      "weighted_f1": 0.81093191340246
+    },
+    "model_name": "ensemble_stacking",
+    "preprocessing_version": "ensemble-1.0.0",
+    "status": "registered",
+    "task": "ensemble_binary",
+    "threshold": 0.7999999999999999,
+    "version": "20260808T125148Z"
+  },
+  "threshold": 0.7999999999999999,
+  "weights": null
+}

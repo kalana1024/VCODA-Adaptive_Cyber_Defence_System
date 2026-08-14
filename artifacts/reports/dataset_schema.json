@@ -1,0 +1,563 @@
+{
+  "columns_present_in_files": {
+    "attack": 1,
+    "client_tcp_flags": 1,
+    "dataset": 1,
+    "dns_query_id": 1,
+    "dns_query_type": 1,
+    "dns_ttl_answer": 1,
+    "dst_to_src_avg_throughput": 1,
+    "dst_to_src_second_bytes": 1,
+    "duration_in": 1,
+    "duration_out": 1,
+    "flow_duration_milliseconds": 1,
+    "ftp_command_ret_code": 1,
+    "icmp_ipv4_type": 1,
+    "icmp_type": 1,
+    "in_bytes": 1,
+    "in_pkts": 1,
+    "ipv4_dst_addr": 1,
+    "ipv4_src_addr": 1,
+    "l4_dst_port": 1,
+    "l4_src_port": 1,
+    "l7_proto": 1,
+    "label": 1,
+    "longest_flow_pkt": 1,
+    "max_ip_pkt_len": 1,
+    "max_ttl": 1,
+    "min_ip_pkt_len": 1,
+    "min_ttl": 1,
+    "num_pkts_1024_to_1514_bytes": 1,
+    "num_pkts_128_to_256_bytes": 1,
+    "num_pkts_256_to_512_bytes": 1,
+    "num_pkts_512_to_1024_bytes": 1,
+    "num_pkts_up_to_128_bytes": 1,
+    "out_bytes": 1,
+    "out_pkts": 1,
+    "protocol": 1,
+    "retransmitted_in_bytes": 1,
+    "retransmitted_in_pkts": 1,
+    "retransmitted_out_bytes": 1,
+    "retransmitted_out_pkts": 1,
+    "server_tcp_flags": 1,
+    "shortest_flow_pkt": 1,
+    "src_to_dst_avg_throughput": 1,
+    "src_to_dst_second_bytes": 1,
+    "tcp_flags": 1,
+    "tcp_win_max_in": 1,
+    "tcp_win_max_out": 1
+  },
+  "created_at": "2026-08-02T18:43:59.430810+00:00",
+  "data_directory": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\data\\raw\\nf_uq_nids_v2",
+  "detected_columns": {
+    "attack_label": "Attack",
+    "binary_label": "Label",
+    "group": "IPV4_SRC_ADDR",
+    "origin": "Dataset",
+    "timestamp": null
+  },
+  "file_count": 1,
+  "files": [
+    {
+      "columns": [
+        {
+          "dtype": "object",
+          "normalised_name": "ipv4_src_addr",
+          "original_name": "IPV4_SRC_ADDR",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2088,
+          "sample_unique_ratio": 0.04176
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "l4_src_port",
+          "original_name": "L4_SRC_PORT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 31266,
+          "sample_unique_ratio": 0.62532
+        },
+        {
+          "dtype": "object",
+          "normalised_name": "ipv4_dst_addr",
+          "original_name": "IPV4_DST_ADDR",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 1689,
+          "sample_unique_ratio": 0.03378
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "l4_dst_port",
+          "original_name": "L4_DST_PORT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 4574,
+          "sample_unique_ratio": 0.09148
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "protocol",
+          "original_name": "PROTOCOL",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 14,
+          "sample_unique_ratio": 0.00028
+        },
+        {
+          "dtype": "float64",
+          "normalised_name": "l7_proto",
+          "original_name": "L7_PROTO",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 111,
+          "sample_unique_ratio": 0.00222
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "in_bytes",
+          "original_name": "IN_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2674,
+          "sample_unique_ratio": 0.05348
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "in_pkts",
+          "original_name": "IN_PKTS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 183,
+          "sample_unique_ratio": 0.00366
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "out_bytes",
+          "original_name": "OUT_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2797,
+          "sample_unique_ratio": 0.05594
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "out_pkts",
+          "original_name": "OUT_PKTS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 165,
+          "sample_unique_ratio": 0.0033
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "tcp_flags",
+          "original_name": "TCP_FLAGS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 31,
+          "sample_unique_ratio": 0.00062
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "client_tcp_flags",
+          "original_name": "CLIENT_TCP_FLAGS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 29,
+          "sample_unique_ratio": 0.00058
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "server_tcp_flags",
+          "original_name": "SERVER_TCP_FLAGS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 28,
+          "sample_unique_ratio": 0.00056
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "flow_duration_milliseconds",
+          "original_name": "FLOW_DURATION_MILLISECONDS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 1792,
+          "sample_unique_ratio": 0.03584
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "duration_in",
+          "original_name": "DURATION_IN",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 1779,
+          "sample_unique_ratio": 0.03558
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "duration_out",
+          "original_name": "DURATION_OUT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 430,
+          "sample_unique_ratio": 0.0086
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "min_ttl",
+          "original_name": "MIN_TTL",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 67,
+          "sample_unique_ratio": 0.00134
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "max_ttl",
+          "original_name": "MAX_TTL",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 72,
+          "sample_unique_ratio": 0.00144
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "longest_flow_pkt",
+          "original_name": "LONGEST_FLOW_PKT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 709,
+          "sample_unique_ratio": 0.01418
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "shortest_flow_pkt",
+          "original_name": "SHORTEST_FLOW_PKT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 128,
+          "sample_unique_ratio": 0.00256
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "min_ip_pkt_len",
+          "original_name": "MIN_IP_PKT_LEN",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 69,
+          "sample_unique_ratio": 0.00138
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "max_ip_pkt_len",
+          "original_name": "MAX_IP_PKT_LEN",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 709,
+          "sample_unique_ratio": 0.01418
+        },
+        {
+          "dtype": "float64",
+          "normalised_name": "src_to_dst_second_bytes",
+          "original_name": "SRC_TO_DST_SECOND_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2967,
+          "sample_unique_ratio": 0.05934
+        },
+        {
+          "dtype": "float64",
+          "normalised_name": "dst_to_src_second_bytes",
+          "original_name": "DST_TO_SRC_SECOND_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 3001,
+          "sample_unique_ratio": 0.06002
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "retransmitted_in_bytes",
+          "original_name": "RETRANSMITTED_IN_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 439,
+          "sample_unique_ratio": 0.00878
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "retransmitted_in_pkts",
+          "original_name": "RETRANSMITTED_IN_PKTS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 49,
+          "sample_unique_ratio": 0.00098
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "retransmitted_out_bytes",
+          "original_name": "RETRANSMITTED_OUT_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 554,
+          "sample_unique_ratio": 0.01108
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "retransmitted_out_pkts",
+          "original_name": "RETRANSMITTED_OUT_PKTS",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 58,
+          "sample_unique_ratio": 0.00116
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "src_to_dst_avg_throughput",
+          "original_name": "SRC_TO_DST_AVG_THROUGHPUT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2228,
+          "sample_unique_ratio": 0.04456
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "dst_to_src_avg_throughput",
+          "original_name": "DST_TO_SRC_AVG_THROUGHPUT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2521,
+          "sample_unique_ratio": 0.05042
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "num_pkts_up_to_128_bytes",
+          "original_name": "NUM_PKTS_UP_TO_128_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 216,
+          "sample_unique_ratio": 0.00432
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "num_pkts_128_to_256_bytes",
+          "original_name": "NUM_PKTS_128_TO_256_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 41,
+          "sample_unique_ratio": 0.00082
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "num_pkts_256_to_512_bytes",
+          "original_name": "NUM_PKTS_256_TO_512_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 36,
+          "sample_unique_ratio": 0.00072
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "num_pkts_512_to_1024_bytes",
+          "original_name": "NUM_PKTS_512_TO_1024_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 35,
+          "sample_unique_ratio": 0.0007
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "num_pkts_1024_to_1514_bytes",
+          "original_name": "NUM_PKTS_1024_TO_1514_BYTES",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 119,
+          "sample_unique_ratio": 0.00238
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "tcp_win_max_in",
+          "original_name": "TCP_WIN_MAX_IN",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 268,
+          "sample_unique_ratio": 0.00536
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "tcp_win_max_out",
+          "original_name": "TCP_WIN_MAX_OUT",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 205,
+          "sample_unique_ratio": 0.0041
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "icmp_type",
+          "original_name": "ICMP_TYPE",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 214,
+          "sample_unique_ratio": 0.00428
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "icmp_ipv4_type",
+          "original_name": "ICMP_IPV4_TYPE",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 210,
+          "sample_unique_ratio": 0.0042
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "dns_query_id",
+          "original_name": "DNS_QUERY_ID",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 6490,
+          "sample_unique_ratio": 0.1298
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "dns_query_type",
+          "original_name": "DNS_QUERY_TYPE",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 7,
+          "sample_unique_ratio": 0.00014
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "dns_ttl_answer",
+          "original_name": "DNS_TTL_ANSWER",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 404,
+          "sample_unique_ratio": 0.00808
+        },
+        {
+          "dtype": "float64",
+          "normalised_name": "ftp_command_ret_code",
+          "original_name": "FTP_COMMAND_RET_CODE",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 8,
+          "sample_unique_ratio": 0.00016
+        },
+        {
+          "dtype": "int64",
+          "normalised_name": "label",
+          "original_name": "Label",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 2,
+          "sample_unique_ratio": 4e-05
+        },
+        {
+          "dtype": "object",
+          "normalised_name": "attack",
+          "original_name": "Attack",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 19,
+          "sample_unique_ratio": 0.00038
+        },
+        {
+          "dtype": "object",
+          "normalised_name": "dataset",
+          "original_name": "Dataset",
+          "sample_constant": false,
+          "sample_infinite": 0,
+          "sample_null_fraction": 0.0,
+          "sample_unique": 4,
+          "sample_unique_ratio": 8e-05
+        }
+      ],
+      "path": "data\\raw\\nf_uq_nids_v2\\NF-UQ-NIDS-v2.csv",
+      "rows": 75987976,
+      "sample_rows": 50000,
+      "size_bytes": 13729330230
+    }
+  ],
+  "full_scan_row_counts": true,
+  "sample_attack_distribution": {
+    "Analysis": 1,
+    "Backdoor": 8,
+    "Benign": 16535,
+    "Bot": 111,
+    "Brute Force": 98,
+    "DDoS": 14256,
+    "DoS": 11766,
+    "Exploits": 19,
+    "Fuzzers": 15,
+    "Generic": 9,
+    "Infilteration": 94,
+    "Reconnaissance": 1728,
+    "Shellcode": 2,
+    "Theft": 1,
+    "injection": 455,
+    "mitm": 2,
+    "password": 763,
+    "scanning": 2502,
+    "xss": 1635
+  },
+  "sample_binary_distribution": {
+    "0": 16535,
+    "1": 33465
+  },
+  "sample_origin_distribution": {
+    "NF-BoT-IoT-v2": 24772,
+    "NF-CSE-CIC-IDS2018-v2": 12438,
+    "NF-ToN-IoT-v2": 11266,
+    "NF-UNSW-NB15-v2": 1524
+  },
+  "schema_fingerprint": "57b77882562c3d493de721493c99b1f0437b294dad14a7e5ec9a9da4e15d064f"
+}

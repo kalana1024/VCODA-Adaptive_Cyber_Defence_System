@@ -1,0 +1,33 @@
+{
+  "artifacts": [
+    "artifacts/reports/deep_transformer_binary_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\deep_learning\\transformer_binary_20260806T195939Z.joblib"
+  ],
+  "experiment": "deep_transformer_binary",
+  "finished_at": "2026-08-06T19:59:40.060970+00:00",
+  "metrics": {
+    "accuracy": 0.2658753739340657,
+    "balanced_accuracy": 0.2751812050212057,
+    "brier_score": 0.25716304779052734,
+    "false_negative_rate": 0.7376369968322816,
+    "false_positive_rate": 0.712000593125307,
+    "macro_f1": 0.23928549398702223,
+    "macro_precision": 0.3786290667735479,
+    "macro_recall": 0.2751812050212057,
+    "mcc": -0.33037231696026026,
+    "pr_auc": 0.8465947859227476,
+    "roc_auc": 0.34532655672019524,
+    "threshold": 0.71,
+    "weighted_f1": 0.3425371667057833
+  },
+  "parameters": {
+    "architecture": "transformer",
+    "device": "cuda",
+    "epochs_run": 6,
+    "profile": "medium",
+    "task": "binary"
+  },
+  "run_id": "a8b82c04-aeea-4df1-8e54-abbfb3b781a7",
+  "started_at": "2026-08-06T19:59:40.060970+00:00",
+  "status": "finished"
+}

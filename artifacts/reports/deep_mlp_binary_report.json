@@ -1,0 +1,226 @@
+{
+  "architecture": "mlp",
+  "device": "cuda",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.14785589536301294,
+      "validation_loss": 2.85947923167769
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.10120906495825449,
+      "validation_loss": 3.110954485757716
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.09482276557858785,
+      "validation_loss": 2.900748253337411
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.09141646183570226,
+      "validation_loss": 3.1475800435844707
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.08801125505654017,
+      "validation_loss": 3.045489234810564
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.08665235568237305,
+      "validation_loss": 3.4087700141766484
+    }
+  ],
+  "loss": "class_weighted_cross_entropy",
+  "metrics": {
+    "accuracy": 0.8065161158367121,
+    "balanced_accuracy": 0.6857920500791117,
+    "brier_score": 0.14697928726673126,
+    "classification_report": {
+      "accuracy": 0.8065161158367121,
+      "attack": {
+        "f1-score": 0.8811525142150218,
+        "precision": 0.8883451672266967,
+        "recall": 0.8740753990537364,
+        "support": 682051.0
+      },
+      "benign": {
+        "f1-score": 0.4798799459239183,
+        "precision": 0.46345775417772916,
+        "recall": 0.49750870110448703,
+        "support": 149119.0
+      },
+      "macro avg": {
+        "f1-score": 0.68051623006947,
+        "precision": 0.6759014607022129,
+        "recall": 0.6857920500791117,
+        "support": 831170.0
+      },
+      "weighted avg": {
+        "f1-score": 0.8091607867573404,
+        "precision": 0.8121167348404833,
+        "recall": 0.8065161158367121,
+        "support": 831170.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        74188,
+        74931
+      ],
+      [
+        85887,
+        596164
+      ]
+    ],
+    "false_negative_rate": 0.12592460094626354,
+    "false_positive_rate": 0.502491298895513,
+    "macro_f1": 0.68051623006947,
+    "macro_precision": 0.6759014607022129,
+    "macro_recall": 0.6857920500791117,
+    "mcc": 0.36155825531039637,
+    "pr_auc": 0.950444664385232,
+    "roc_auc": 0.8038712407997184,
+    "threshold": 0.5,
+    "weighted_f1": 0.8091607867573404
+  },
+  "mixed_precision": true,
+  "registry_record": {
+    "artifact_path": "models\\registry\\mlp_binary\\20260807T031129Z\\mlp_binary_20260807T031129Z.joblib",
+    "artifact_sha256": "db688bf1bfc40068df207a7737a5850e62883461058f564dd00a8c5d65a75bfc",
+    "created_at": "2026-08-07T03:11:29.289872+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "architecture": "mlp",
+      "device": "cuda",
+      "domain_adaptation": {
+        "adabn": true,
+        "eps": 0.001,
+        "method": "coral"
+      },
+      "epochs_run": 6,
+      "hyperparameter_overrides": null,
+      "loss": "class_weighted_cross_entropy",
+      "mixed_precision": true,
+      "profile": "medium"
+    },
+    "metrics": {
+      "accuracy": 0.8065161158367121,
+      "balanced_accuracy": 0.6857920500791117,
+      "brier_score": 0.14697928726673126,
+      "classification_report": {
+        "accuracy": 0.8065161158367121,
+        "attack": {
+          "f1-score": 0.8811525142150218,
+          "precision": 0.8883451672266967,
+          "recall": 0.8740753990537364,
+          "support": 682051.0
+        },
+        "benign": {
+          "f1-score": 0.4798799459239183,
+          "precision": 0.46345775417772916,
+          "recall": 0.49750870110448703,
+          "support": 149119.0
+        },
+        "macro avg": {
+          "f1-score": 0.68051623006947,
+          "precision": 0.6759014607022129,
+          "recall": 0.6857920500791117,
+          "support": 831170.0
+        },
+        "weighted avg": {
+          "f1-score": 0.8091607867573404,
+          "precision": 0.8121167348404833,
+          "recall": 0.8065161158367121,
+          "support": 831170.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          74188,
+          74931
+        ],
+        [
+          85887,
+          596164
+        ]
+      ],
+      "false_negative_rate": 0.12592460094626354,
+      "false_positive_rate": 0.502491298895513,
+      "macro_f1": 0.68051623006947,
+      "macro_precision": 0.6759014607022129,
+      "macro_recall": 0.6857920500791117,
+      "mcc": 0.36155825531039637,
+      "pr_auc": 0.950444664385232,
+      "roc_auc": 0.8038712407997184,
+      "threshold": 0.5,
+      "weighted_f1": 0.8091607867573404
+    },
+    "model_name": "mlp_binary",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "deep_binary",
+    "threshold": 0.5,
+    "version": "20260807T031129Z"
+  },
+  "task": "binary"
+}

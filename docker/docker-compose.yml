@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: ["vcoda", "serve-api", "--host", "0.0.0.0", "--port", "8000"]
+    ports: ["8000:8000"]
+    volumes:
+      - ../models:/app/models
+      - ../artifacts:/app/artifacts
+      - ../outputs:/app/outputs
+      - ../data/processed:/app/data/processed
+  dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: ["vcoda", "dashboard", "--port", "8501"]
+    ports: ["8501:8501"]
+    volumes:
+      - ../models:/app/models
+      - ../artifacts:/app/artifacts
+      - ../outputs:/app/outputs

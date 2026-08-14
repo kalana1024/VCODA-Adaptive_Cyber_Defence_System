@@ -1,0 +1,38 @@
+{
+  "artifacts": [
+    "artifacts/reports/ensemble_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\ensemble\\stacking_20260806T200256Z.joblib"
+  ],
+  "experiment": "ensemble_binary",
+  "finished_at": "2026-08-06T20:02:56.913117+00:00",
+  "metrics": {
+    "accuracy": 0.5686502313439279,
+    "balanced_accuracy": 0.6610592635545729,
+    "brier_score": 0.2382347336871859,
+    "false_negative_rate": 0.4662284141251109,
+    "false_positive_rate": 0.2116530587657433,
+    "macro_f1": 0.5073951945873347,
+    "macro_precision": 0.5762048603770287,
+    "macro_recall": 0.6610592635545729,
+    "mcc": 0.2215716470273514,
+    "mean_disagreement": 0.23650717778506514,
+    "pr_auc": 0.922649249038406,
+    "roc_auc": 0.6458322966229217,
+    "threshold": 0.5599999999999999,
+    "weighted_f1": 0.6335048338544111
+  },
+  "parameters": {
+    "members": [
+      "deep_autoencoder_binary",
+      "deep_cnn1d_binary",
+      "deep_cnn_lstm_binary",
+      "deep_mlp_binary",
+      "deep_transformer_binary"
+    ],
+    "method": "stacking",
+    "weights": null
+  },
+  "run_id": "f8253137-fc04-4502-bfdb-21154608ce31",
+  "started_at": "2026-08-06T20:02:56.913117+00:00",
+  "status": "finished"
+}

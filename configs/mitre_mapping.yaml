@@ -1,0 +1,33 @@
+mappings:
+  reconnaissance:
+    tactics: ["TA0007 Discovery"]
+    techniques:
+      - id: T1046
+        name: Network Service Discovery
+        confidence: 0.75
+        evidence: ["many_destination_ports", "many_destination_hosts", "short_failed_connections"]
+    mitigations: ["M1031 Network Intrusion Prevention", "M1037 Filter Network Traffic"]
+  brute_force:
+    tactics: ["TA0006 Credential Access"]
+    techniques:
+      - id: T1110
+        name: Brute Force
+        confidence: 0.75
+        evidence: ["repeated_authentication_failures", "single_account_many_attempts"]
+    mitigations: ["M1036 Account Use Policies", "M1027 Password Policies"]
+  dos:
+    tactics: ["TA0040 Impact"]
+    techniques:
+      - id: T1498
+        name: Network Denial of Service
+        confidence: 0.75
+        evidence: ["high_packet_rate", "high_connection_rate", "resource_saturation"]
+    mitigations: ["M1037 Filter Network Traffic", "M1031 Network Intrusion Prevention"]
+  web_attack:
+    tactics: ["TA0001 Initial Access"]
+    techniques:
+      - id: T1190
+        name: Exploit Public-Facing Application
+        confidence: 0.65
+        evidence: ["web_exploit_classification", "suspicious_http_pattern"]
+    mitigations: ["M1048 Application Isolation and Sandboxing", "M1050 Exploit Protection"]

@@ -1,0 +1,845 @@
+{
+  "architecture": "multitask",
+  "binary_metrics": {
+    "accuracy": 0.8357500717788011,
+    "balanced_accuracy": 0.7682152761912494,
+    "brier_score": 0.10789227485656738,
+    "classification_report": {
+      "accuracy": 0.8357500717788011,
+      "attack": {
+        "f1-score": 0.8874347346600711,
+        "precision": 0.8184741780735197,
+        "recall": 0.9690850095609939,
+        "support": 300178.0
+      },
+      "benign": {
+        "f1-score": 0.6963098917288406,
+        "precision": 0.9011525105984107,
+        "recall": 0.567345542821505,
+        "support": 149119.0
+      },
+      "macro avg": {
+        "f1-score": 0.7918723131944558,
+        "precision": 0.8598133443359652,
+        "recall": 0.7682152761912494,
+        "support": 449297.0
+      },
+      "weighted avg": {
+        "f1-score": 0.8240015369021021,
+        "precision": 0.8459146245215913,
+        "recall": 0.8357500717788011,
+        "support": 449297.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        84602,
+        64517
+      ],
+      [
+        9280,
+        290898
+      ]
+    ],
+    "false_negative_rate": 0.03091499043900619,
+    "false_positive_rate": 0.43265445717849504,
+    "macro_f1": 0.7918723131944558,
+    "macro_precision": 0.8598133443359652,
+    "macro_recall": 0.7682152761912494,
+    "mcc": 0.6213129180320268,
+    "pr_auc": 0.9696680992260066,
+    "roc_auc": 0.9514824993539799,
+    "threshold": 0.5,
+    "weighted_f1": 0.8240015369021021
+  },
+  "binary_registry_record": {
+    "artifact_path": "models\\registry\\multitask_binary\\20260808T125038Z\\multitask_20260808T125038Z.joblib",
+    "artifact_sha256": "c1859b737a6d9ac3bf9220917ea2cb9fb4d20eb61f5cfb5ddc327878fa279c23",
+    "created_at": "2026-08-08T12:50:38.063649+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "architecture": "multitask",
+      "device": "cuda",
+      "domain_adaptation": {
+        "adabn": true,
+        "eps": 0.001,
+        "method": "coral"
+      },
+      "epochs_run": 7,
+      "multiclass_weight": 1.0,
+      "profile": "medium"
+    },
+    "metrics": {
+      "accuracy": 0.8357500717788011,
+      "balanced_accuracy": 0.7682152761912494,
+      "brier_score": 0.10789227485656738,
+      "classification_report": {
+        "accuracy": 0.8357500717788011,
+        "attack": {
+          "f1-score": 0.8874347346600711,
+          "precision": 0.8184741780735197,
+          "recall": 0.9690850095609939,
+          "support": 300178.0
+        },
+        "benign": {
+          "f1-score": 0.6963098917288406,
+          "precision": 0.9011525105984107,
+          "recall": 0.567345542821505,
+          "support": 149119.0
+        },
+        "macro avg": {
+          "f1-score": 0.7918723131944558,
+          "precision": 0.8598133443359652,
+          "recall": 0.7682152761912494,
+          "support": 449297.0
+        },
+        "weighted avg": {
+          "f1-score": 0.8240015369021021,
+          "precision": 0.8459146245215913,
+          "recall": 0.8357500717788011,
+          "support": 449297.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          84602,
+          64517
+        ],
+        [
+          9280,
+          290898
+        ]
+      ],
+      "false_negative_rate": 0.03091499043900619,
+      "false_positive_rate": 0.43265445717849504,
+      "macro_f1": 0.7918723131944558,
+      "macro_precision": 0.8598133443359652,
+      "macro_recall": 0.7682152761912494,
+      "mcc": 0.6213129180320268,
+      "pr_auc": 0.9696680992260066,
+      "roc_auc": 0.9514824993539799,
+      "threshold": 0.5,
+      "weighted_f1": 0.8240015369021021
+    },
+    "model_name": "multitask_binary",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "deep_multitask_binary",
+    "threshold": 0.5,
+    "version": "20260808T125038Z"
+  },
+  "device": "cuda",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7321650721130372,
+      "validation_loss": 9.346832763582514
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.45664353913752237,
+      "validation_loss": 9.0629258063653
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.41589975561777753,
+      "validation_loss": 10.916763584176763
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4026341803995768,
+      "validation_loss": 10.187621346318265
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3907529031085968,
+      "validation_loss": 11.921150674177165
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3709754241434733,
+      "validation_loss": 9.970447068544201
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3658613648846944,
+      "validation_loss": 10.625188153461085
+    }
+  ],
+  "multiclass_metrics": {
+    "accuracy": 0.44414273854488234,
+    "balanced_accuracy": 0.35082345569741474,
+    "classification_report": {
+      "Backdoor": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "Benign": {
+        "f1-score": 0.4374051958988824,
+        "precision": 0.8981624234343097,
+        "recall": 0.28909796873637833,
+        "support": 149119.0
+      },
+      "DDoS": {
+        "f1-score": 0.8296417445007582,
+        "precision": 0.7638472170717729,
+        "recall": 0.907839117456544,
+        "support": 149749.0
+      },
+      "DoS": {
+        "f1-score": 0.23638127801136627,
+        "precision": 0.8842032492222607,
+        "recall": 0.13642666666666667,
+        "support": 150000.0
+      },
+      "Reconnaissance": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "Theft": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.44414273854488234,
+      "injection": {
+        "f1-score": 0.000932690812995492,
+        "precision": 0.0004694762210294049,
+        "recall": 0.06993006993006994,
+        "support": 429.0
+      },
+      "macro avg": {
+        "f1-score": 0.1253634091020002,
+        "precision": 0.21222353049578105,
+        "recall": 0.11694115189913824,
+        "support": 449297.0
+      },
+      "mitm": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "password": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "ransomware": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "scanning": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      },
+      "weighted avg": {
+        "f1-score": 0.5006065894732287,
+        "precision": 0.8478781921936264,
+        "recall": 0.44414273854488234,
+        "support": 449297.0
+      },
+      "xss": {
+        "f1-score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        73,
+        43110,
+        2489,
+        502,
+        7871,
+        13248,
+        3087,
+        28695,
+        8780,
+        8992,
+        28332,
+        3940
+      ],
+      [
+        0,
+        1475,
+        135948,
+        2178,
+        5126,
+        0,
+        682,
+        0,
+        4298,
+        0,
+        42,
+        0
+      ],
+      [
+        2111,
+        3413,
+        39175,
+        20464,
+        5363,
+        51,
+        60102,
+        16,
+        8283,
+        1,
+        1965,
+        9056
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        366,
+        0,
+        1,
+        3,
+        30,
+        0,
+        3,
+        0,
+        5,
+        21
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "macro_f1": 0.1253634091020002,
+    "macro_precision": 0.21222353049578105,
+    "macro_recall": 0.11694115189913824,
+    "mcc": 0.3562505173751158,
+    "pr_auc": null,
+    "roc_auc": NaN,
+    "threshold": null,
+    "weighted_f1": 0.5006065894732287
+  },
+  "multiclass_registry_record": {
+    "artifact_path": "models\\registry\\multitask_multiclass\\20260808T125038Z\\multitask_20260808T125038Z.joblib",
+    "artifact_sha256": "c1859b737a6d9ac3bf9220917ea2cb9fb4d20eb61f5cfb5ddc327878fa279c23",
+    "created_at": "2026-08-08T12:50:38.114048+00:00",
+    "dataset_fingerprint": "a62fd4b3f52b44da6c05dccd7b39d9d460ce06b7db64ea125e84389653e557db",
+    "environment": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+    },
+    "feature_list": [
+      "src_port",
+      "dst_port",
+      "protocol",
+      "application_protocol",
+      "in_bytes",
+      "in_packets",
+      "out_bytes",
+      "out_packets",
+      "tcp_flags",
+      "client_tcp_flags",
+      "server_tcp_flags",
+      "flow_duration_ms",
+      "duration_in",
+      "duration_out",
+      "min_ttl",
+      "max_ttl",
+      "longest_flow_pkt",
+      "shortest_flow_pkt",
+      "min_ip_pkt_len",
+      "max_ip_pkt_len",
+      "src_to_dst_second_bytes",
+      "dst_to_src_second_bytes",
+      "retransmitted_in_bytes",
+      "retransmitted_in_pkts",
+      "retransmitted_out_bytes",
+      "retransmitted_out_pkts",
+      "src_to_dst_avg_throughput",
+      "dst_to_src_avg_throughput",
+      "num_pkts_up_to_128_bytes",
+      "num_pkts_128_to_256_bytes",
+      "num_pkts_256_to_512_bytes",
+      "num_pkts_512_to_1024_bytes",
+      "num_pkts_1024_to_1514_bytes",
+      "tcp_win_max_in",
+      "tcp_win_max_out",
+      "icmp_type",
+      "icmp_ipv4_type",
+      "dns_query_id",
+      "dns_query_type",
+      "dns_ttl_answer",
+      "ftp_command_ret_code",
+      "total_bytes",
+      "total_packets",
+      "bytes_per_packet",
+      "packets_per_second",
+      "bytes_per_second",
+      "direction_byte_ratio",
+      "direction_packet_ratio",
+      "packet_asymmetry",
+      "byte_asymmetry"
+    ],
+    "git_commit": null,
+    "hyperparameters": {
+      "architecture": "multitask",
+      "device": "cuda",
+      "domain_adaptation": {
+        "adabn": true,
+        "eps": 0.001,
+        "method": "coral"
+      },
+      "epochs_run": 7,
+      "multiclass_weight": 1.0,
+      "profile": "medium"
+    },
+    "metrics": {
+      "accuracy": 0.44414273854488234,
+      "balanced_accuracy": 0.35082345569741474,
+      "classification_report": {
+        "Backdoor": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Benign": {
+          "f1-score": 0.4374051958988824,
+          "precision": 0.8981624234343097,
+          "recall": 0.28909796873637833,
+          "support": 149119.0
+        },
+        "DDoS": {
+          "f1-score": 0.8296417445007582,
+          "precision": 0.7638472170717729,
+          "recall": 0.907839117456544,
+          "support": 149749.0
+        },
+        "DoS": {
+          "f1-score": 0.23638127801136627,
+          "precision": 0.8842032492222607,
+          "recall": 0.13642666666666667,
+          "support": 150000.0
+        },
+        "Reconnaissance": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "Theft": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.44414273854488234,
+        "injection": {
+          "f1-score": 0.000932690812995492,
+          "precision": 0.0004694762210294049,
+          "recall": 0.06993006993006994,
+          "support": 429.0
+        },
+        "macro avg": {
+          "f1-score": 0.1253634091020002,
+          "precision": 0.21222353049578105,
+          "recall": 0.11694115189913824,
+          "support": 449297.0
+        },
+        "mitm": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "password": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "ransomware": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "scanning": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        },
+        "weighted avg": {
+          "f1-score": 0.5006065894732287,
+          "precision": 0.8478781921936264,
+          "recall": 0.44414273854488234,
+          "support": 449297.0
+        },
+        "xss": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          73,
+          43110,
+          2489,
+          502,
+          7871,
+          13248,
+          3087,
+          28695,
+          8780,
+          8992,
+          28332,
+          3940
+        ],
+        [
+          0,
+          1475,
+          135948,
+          2178,
+          5126,
+          0,
+          682,
+          0,
+          4298,
+          0,
+          42,
+          0
+        ],
+        [
+          2111,
+          3413,
+          39175,
+          20464,
+          5363,
+          51,
+          60102,
+          16,
+          8283,
+          1,
+          1965,
+          9056
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          366,
+          0,
+          1,
+          3,
+          30,
+          0,
+          3,
+          0,
+          5,
+          21
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "macro_f1": 0.1253634091020002,
+      "macro_precision": 0.21222353049578105,
+      "macro_recall": 0.11694115189913824,
+      "mcc": 0.3562505173751158,
+      "pr_auc": null,
+      "roc_auc": NaN,
+      "threshold": null,
+      "weighted_f1": 0.5006065894732287
+    },
+    "model_name": "multitask_multiclass",
+    "preprocessing_version": "1.0.0",
+    "status": "registered",
+    "task": "deep_multitask_multiclass",
+    "threshold": null,
+    "version": "20260808T125038Z"
+  }
+}

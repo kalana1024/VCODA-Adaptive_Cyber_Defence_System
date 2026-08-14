@@ -1,0 +1,197 @@
+Metadata-Version: 2.4
+Name: vcoda
+Version: 1.0.0
+Summary: Verifiable Cybersecurity-Oriented Detection and Adaptive Response Architecture
+Author: V-CODA Project
+License: MIT
+Requires-Python: <3.14,>=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.1
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: joblib>=1.3
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: pydantic>=2.6
+Requires-Dist: typer>=0.12
+Requires-Dist: rich>=13.7
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: psutil>=5.9
+Requires-Dist: networkx>=3.2
+Provides-Extra: training
+Requires-Dist: xgboost>=2.1; extra == "training"
+Requires-Dist: lightgbm>=4.3; extra == "training"
+Requires-Dist: catboost>=1.2; extra == "training"
+Requires-Dist: optuna>=3.6; extra == "training"
+Requires-Dist: shap>=0.45; extra == "training"
+Requires-Dist: pyarrow>=15; extra == "training"
+Requires-Dist: scipy>=1.12; extra == "training"
+Requires-Dist: imbalanced-learn>=0.12; extra == "training"
+Requires-Dist: matplotlib>=3.8; extra == "training"
+Provides-Extra: deep
+Requires-Dist: torch>=2.2; extra == "deep"
+Requires-Dist: tensorboard>=2.16; extra == "deep"
+Provides-Extra: streaming
+Requires-Dist: river>=0.21; extra == "streaming"
+Provides-Extra: api
+Requires-Dist: fastapi>=0.110; extra == "api"
+Requires-Dist: uvicorn[standard]>=0.27; extra == "api"
+Requires-Dist: python-multipart>=0.0.9; extra == "api"
+Provides-Extra: dashboard
+Requires-Dist: streamlit>=1.33; extra == "dashboard"
+Requires-Dist: plotly>=5.20; extra == "dashboard"
+Provides-Extra: capture
+Requires-Dist: scapy>=2.5; extra == "capture"
+Requires-Dist: pyshark>=0.6; extra == "capture"
+Provides-Extra: cti
+Requires-Dist: taxii2-client>=2.3; extra == "cti"
+Provides-Extra: mlops
+Requires-Dist: mlflow>=2.11; extra == "mlops"
+Provides-Extra: development
+Requires-Dist: pytest>=8.0; extra == "development"
+Requires-Dist: pytest-cov>=5.0; extra == "development"
+Requires-Dist: httpx>=0.27; extra == "development"
+Requires-Dist: ruff>=0.3; extra == "development"
+Provides-Extra: all
+Requires-Dist: xgboost>=2.1; extra == "all"
+Requires-Dist: lightgbm>=4.3; extra == "all"
+Requires-Dist: catboost>=1.2; extra == "all"
+Requires-Dist: optuna>=3.6; extra == "all"
+Requires-Dist: shap>=0.45; extra == "all"
+Requires-Dist: pyarrow>=15; extra == "all"
+Requires-Dist: scipy>=1.12; extra == "all"
+Requires-Dist: imbalanced-learn>=0.12; extra == "all"
+Requires-Dist: matplotlib>=3.8; extra == "all"
+Requires-Dist: torch>=2.2; extra == "all"
+Requires-Dist: tensorboard>=2.16; extra == "all"
+Requires-Dist: river>=0.21; extra == "all"
+Requires-Dist: fastapi>=0.110; extra == "all"
+Requires-Dist: uvicorn[standard]>=0.27; extra == "all"
+Requires-Dist: python-multipart>=0.0.9; extra == "all"
+Requires-Dist: streamlit>=1.33; extra == "all"
+Requires-Dist: plotly>=5.20; extra == "all"
+Requires-Dist: scapy>=2.5; extra == "all"
+Requires-Dist: pyshark>=0.6; extra == "all"
+Requires-Dist: mlflow>=2.11; extra == "all"
+Requires-Dist: taxii2-client>=2.3; extra == "all"
+Requires-Dist: pytest>=8.0; extra == "all"
+Requires-Dist: pytest-cov>=5.0; extra == "all"
+Requires-Dist: httpx>=0.27; extra == "all"
+Requires-Dist: ruff>=0.3; extra == "all"
+Dynamic: license-file
+
+# V-CODA Advanced Full Project
+
+**V-CODA** means **Verifiable Cybersecurity-Oriented Detection and Adaptive Response Architecture**.
+
+This repository is a production-style research implementation of a hybrid network intrusion detection and response platform. It contains real training, evaluation, inference, PCAP, live-capture, explainability, MITRE ATT&CK, drift, audit, model-registry, and recovery workflows. It does **not** ship a falsely pretrained model and does not contain NF-UQ-NIDS-v2.
+
+## Detection architecture
+
+1. **Known-attack models:** XGBoost primary model, plus LightGBM, CatBoost, Random Forest, and Extra Trees comparisons.
+2. **Deep models:** PyTorch MLP, one-dimensional CNN, CNN-LSTM, Transformer encoder, and benign-only autoencoder.
+3. **Anomaly models:** Isolation Forest, optional Local Outlier Factor/One-Class SVM, autoencoder, and River Half-Space Trees when installed.
+4. **Fusion:** validation-trained logistic stacking or validation-optimised weighted soft voting.
+5. **Threat reasoning:** probable MITRE ATT&CK mappings, IOC/STIX enrichment, NetworkX incident graph, alert correlation.
+6. **Adaptation:** ADWIN/Page-Hinkley monitoring; safe online anomaly updates; no silent supervised retraining.
+7. **Response:** recommendation-only by default, simulation, human-approved, and optional Windows Firewall mode.
+8. **Verifiability:** model checksums, version registry, SHAP where supported, chained SHA-256 audit log.
+9. **Self-healing:** checksum monitoring, corrupt-model quarantine, last-known-good rollback, heartbeat monitoring, audit verification, and reversible response cleanup.
+
+## Quick start on Windows
+
+```powershell
+cd C:\path\to\VCODA_Advanced_Full_Project
+powershell -ExecutionPolicy Bypass -File .\setup_windows.ps1 -Profile full
+.\.venv\Scripts\Activate.ps1
+vcoda system-check
+```
+
+Place the extracted NF-UQ-NIDS-v2 CSV or Parquet files inside:
+
+```text
+data\raw\nf_uq_nids_v2\
+```
+
+Then run:
+
+```powershell
+vcoda inspect-data --data-dir ".\data\raw\nf_uq_nids_v2"
+vcoda prepare-data
+vcoda train supervised --task binary
+vcoda train supervised --task multiclass
+vcoda train anomaly
+vcoda train deep --architecture mlp --task binary
+vcoda train deep --architecture autoencoder --task binary
+vcoda optimise-ensemble
+vcoda evaluate
+```
+
+Start the API and dashboard in separate terminals:
+
+```powershell
+vcoda serve-api
+vcoda dashboard
+```
+
+API documentation: `http://127.0.0.1:8000/docs`  
+Dashboard: `http://127.0.0.1:8501`
+
+## Temporal neural models
+
+CNN, CNN-LSTM, and Transformer models require trustworthy ordering and grouping. Dataset preparation preserves `sequence_group` and `event_time` metadata where the actual dataset provides them. If reliable sequence order is unavailable, V-CODA refuses temporal training instead of fabricating a sequence.
+
+## Default safety position
+
+`configs/response_policy.yaml` uses:
+
+```yaml
+mode: recommendation_only
+```
+
+Windows Firewall changes are disabled until explicitly configured, confirmed, and executed with administrator privileges. Arbitrary commands are never generated from model output.
+
+## Self-healing meaning
+
+Self-healing is controlled operational recovery—not unrestricted autonomous modification. It can:
+
+- detect corrupt active model artefacts;
+- quarantine invalid files;
+- roll back to the last checksum-valid model;
+- verify the audit chain;
+- report stale service heartbeats;
+- reverse expired temporary response actions;
+- preserve drift windows and recommend retraining.
+
+It cannot silently retrain or promote the supervised model.
+
+## Documentation
+
+- [Windows setup](docs/WINDOWS_SETUP.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Dataset engineering](docs/DATASET_GUIDE.md)
+- [Training](docs/TRAINING_GUIDE.md)
+- [Evaluation](docs/EVALUATION_GUIDE.md)
+- [PCAP and live monitoring](docs/PCAP_LIVE_GUIDE.md)
+- [Self-healing](docs/SELF_HEALING.md)
+- [API](docs/API_GUIDE.md)
+- [Dashboard](docs/DASHBOARD_GUIDE.md)
+- [Configuration](docs/CONFIGURATION.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Lecturer procedure](docs/LECTURER_DEMO.md)
+- [Viva questions](docs/VIVA_QA.md)
+- [Known limitations](docs/KNOWN_LIMITATIONS.md)
+
+## Tested in the packaging environment
+
+- Python syntax compilation
+- CLI help/import
+- 26 automated tests
+- deep-model forward passes on CPU
+- model checksum validation
+- deliberate-corruption rollback test
+- audit-chain tamper detection
+- API health and validation tests
+- response-policy and upload-security tests
+
+Full NF-UQ-NIDS-v2 training, Windows Npcap capture, CUDA training, Docker Desktop, and Windows Firewall changes were not executed in the packaging environment. See `TEST_REPORT.md`.

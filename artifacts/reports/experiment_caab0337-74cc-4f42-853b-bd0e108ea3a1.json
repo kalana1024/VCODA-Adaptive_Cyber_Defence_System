@@ -1,0 +1,33 @@
+{
+  "artifacts": [
+    "artifacts/reports/deep_cnn_lstm_binary_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\deep_learning\\cnn_lstm_binary_20260808T114106Z.joblib"
+  ],
+  "experiment": "deep_cnn_lstm_binary",
+  "finished_at": "2026-08-08T11:41:06.475899+00:00",
+  "metrics": {
+    "accuracy": 0.6641424530074711,
+    "balanced_accuracy": 0.4121161996544067,
+    "brier_score": 0.2785031199455261,
+    "false_negative_rate": 0.24073335697229092,
+    "false_positive_rate": 0.9350342437188957,
+    "macro_f1": 0.4231664492812445,
+    "macro_precision": 0.4387731489698168,
+    "macro_recall": 0.4121161996544067,
+    "mcc": -0.1467085321544184,
+    "pr_auc": 0.7630165923552619,
+    "roc_auc": 0.2979427353442128,
+    "threshold": 0.5,
+    "weighted_f1": 0.6938365061461859
+  },
+  "parameters": {
+    "architecture": "cnn_lstm",
+    "device": "cuda",
+    "epochs_run": 11,
+    "profile": "medium",
+    "task": "binary"
+  },
+  "run_id": "caab0337-74cc-4f42-853b-bd0e108ea3a1",
+  "started_at": "2026-08-08T11:41:06.475899+00:00",
+  "status": "finished"
+}

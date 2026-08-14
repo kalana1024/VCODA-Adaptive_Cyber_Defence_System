@@ -1,0 +1,85 @@
+{
+  "audit": {
+    "last_hash": "994fceba80b8c61e1019cd3f2b8c8c6ff7bb7b4801c22d2b8e6d237d544b3e02",
+    "records": 5402,
+    "valid": true
+  },
+  "auto_retrain_main_models": false,
+  "healthy": false,
+  "heartbeats": [
+    {
+      "age_seconds": 7760.150275,
+      "automatic_restart": false,
+      "component": "service:api",
+      "healthy": false
+    },
+    {
+      "age_seconds": 2.91359,
+      "automatic_restart": false,
+      "component": "service:inference",
+      "healthy": true
+    },
+    {
+      "age_seconds": 7.77729,
+      "automatic_restart": false,
+      "component": "service:live_monitor",
+      "healthy": true
+    }
+  ],
+  "models": [
+    {
+      "action": null,
+      "component": "model:anomaly_autoencoder",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\autoencoder_binary\\20260808T124458Z\\autoencoder_binary_20260808T124458Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:anomaly_offline",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\isolation_forest\\20260808T092004Z\\isolation_forest_20260808T092004Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:deep_binary",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\transformer_binary\\20260808T124008Z\\transformer_binary_20260808T124008Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:deep_multitask_binary",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\multitask_binary\\20260808T125038Z\\multitask_20260808T125038Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:deep_multitask_multiclass",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\multitask_multiclass\\20260808T125038Z\\multitask_20260808T125038Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:ensemble_binary",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\ensemble_stacking\\20260808T125148Z\\stacking_20260808T125148Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:supervised_binary",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\binary_xgboost\\20260806T213930Z\\binary_xgboost_20260806T213930Z.joblib"
+    },
+    {
+      "action": null,
+      "component": "model:supervised_multiclass",
+      "healthy": true,
+      "path": "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\registry\\multiclass_xgboost\\20260808T090345Z\\multiclass_xgboost_20260808T090345Z.joblib"
+    }
+  ],
+  "response_rollbacks": [],
+  "safe_online_updates": {
+    "anomaly_model": true,
+    "drift_detector": true
+  },
+  "timestamp": "2026-08-10T19:13:56.753197+00:00"
+}

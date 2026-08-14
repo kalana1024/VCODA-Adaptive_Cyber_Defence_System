@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    "artifacts/reports/deep_multitask_report.json",
+    "E:\\University works\\Research\\VCODA\\VCODA_Advanced_Full_Project\\models\\deep_learning\\multitask_20260808T125038Z.joblib"
+  ],
+  "experiment": "deep_multitask",
+  "finished_at": "2026-08-08T12:50:38.202906+00:00",
+  "metrics": {
+    "accuracy": 0.8357500717788011,
+    "balanced_accuracy": 0.7682152761912494,
+    "brier_score": 0.10789227485656738,
+    "false_negative_rate": 0.03091499043900619,
+    "false_positive_rate": 0.43265445717849504,
+    "macro_f1": 0.7918723131944558,
+    "macro_precision": 0.8598133443359652,
+    "macro_recall": 0.7682152761912494,
+    "mcc": 0.6213129180320268,
+    "pr_auc": 0.9696680992260066,
+    "roc_auc": 0.9514824993539799,
+    "threshold": 0.5,
+    "weighted_f1": 0.8240015369021021
+  },
+  "parameters": {
+    "architecture": "multitask",
+    "device": "cuda",
+    "epochs_run": 7
+  },
+  "run_id": "b51ea687-12ed-4a15-88ad-d17329955dda",
+  "started_at": "2026-08-08T12:50:38.202906+00:00",
+  "status": "finished"
+}
